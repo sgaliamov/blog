@@ -5,4 +5,4 @@ This repository contains my finished and published blog posts.
 ## Index
 
 1. [Initial commit](posts/initial%20commit.md).
-2. [My introduction to the Rust language](posts/rust%20introduction.md).
+2. [My first acquaintance with the Rust language](posts/rust%20acquaintance.md).
