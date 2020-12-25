@@ -20,11 +20,11 @@ To make the post not completely boring, I did a [benchmarking](#comparison-with-
 
 So, after ten years of development and five years after the [official release](https://blog.rust-lang.org/2015/05/15/Rust-1.0.html), `Rust` should be mature enough.
 Right?
-When it has been ranked as the ["The Most Loved Programming Language"](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) for five years in a row, you should definitely try it.
+When it has been ranked as the ["The Most Loved Programming Language"](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) for five years in a row(!), you should definitely try it.
 And I've tried.
-I created two simple projects to learn it.
+I've created two simple projects to learn it.
 
-In my research, I discovered some facts about `Rust` that I found interesting.
+In my research, I discovered some facts about `Rust` that I find interesting.
 
 First.
 No one really knows why the language has such a name, and it is likely that even Graydon Hoare, the author of the language, [does not know it](https://www.reddit.com/r/rust/comments/27jvdt/internet_archaeology_the_definitive_endall_source/).
@@ -36,6 +36,7 @@ Rust may seem revolutionary to some people, but one of the creators of the langu
 
 And I find it very wise.
 There are so many "hipsters" in the industry these days, and many projects are doomed from the beginning just because the main goal of such developers is "to try out a new technology" rather than to solve a problem.
+
 I believe that with such a “rusty” logic, the language has a bright future.
 
 ## My first Rust project
@@ -87,13 +88,13 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
 This is the core logic of the application.
 It takes a certain `population` as the input, mutates it, recombines the best offspring, and returns them for the next iteration.
 Piece of cake.
-You don't even need to know `Rust` to understand it.
+You don't even need to know `Rust` to understand it!
 
 As you can see, it is easy to read and very expressive.
 A classic imperative or OOP implementation would require a lot more code.
-And you may notice that it has parallelism enabled on the lines with `into_par_iter`.
+And you may notice that it has a parallelism enabled on the lines with `into_par_iter`.
 It uses [rayon](https://docs.rs/rayon) crate, and it's a great example of the language's capabilities and extensibility.
-The idea is very similar to [PLINQ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq) in `.NET`.
+The idea is very similar to `AsParallel` from [PLINQ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq) in `.NET`.
 
 When I wrote this code, I was very impressed because it felt like you were writing in a high-level language like `C#` or `TypeScript`.
 
@@ -104,19 +105,12 @@ Functional programming capabilities are very impressive for a system-level langu
 Since I'm mostly a `.NET` developer I was curious how it performs in comparison with `ASP.NET` platform.
 I [expected](https://www.techempower.com/benchmarks/#section=data-r19&hw=ph&test=composite) to see that the Rust implementation outperform C#.
 
-
-
-
-But I have not noticed significant advantage of Rust.
-`ASP.NET` even was slightly faster.
-
-TBD table
-
 To implement `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs) I spend less than hour and it's only 55 lines of code including all empty lines.
 But to implement Rust version I spend 2 days. It's too much, even taking in account that I'm new in this technology stack.
+And it is more verbose at least twice.
 
 I choose `actix` because it is one of the fastest web servers on Rust.
-First I implemented it with `r2d2`. And because `r2d2_postgres` is synchronous I used `actix_web::web::block` function to run queries in a thread pool.
+First, I implemented it with `r2d2`. And because `r2d2_postgres` is synchronous I used `actix_web::web::block` function to run queries in a thread pool.
 
 ``` rust
 #[get("/{id}")]
@@ -156,21 +150,34 @@ Yes, it's verbose, but it's clear that it has no over-engineering and overhead.
 So it should be fast.
 I thought.
 
-But it was slower that ASP.NET.
+I created simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
+And it showed that `ASP.NET` was even faster!
+
+TBD table
+
 It was a surprise for me.
+I expected to see how Rust will bit C#.
+But I have not noticed significant advantage of Rust.
+
 I thought that the reason is because I do not have normal asynchronicity.
 Probably I did something wrong.
 I will be happy if someone tell me how to improve it.
 
 So I decided to try `bb8`. The code that I've got at the end is even more [verbose](https://github.com/sgaliamov/rust-web-api/blob/master/src/bin/bb8.rs). So much, that I even shame to show it here. Except of complexity and fights with the compiler, I faced another not nice thing about Rust. To use some "obvious" features, like asynchronous closures, you have to use nightly build to enable [unstable features](https://doc.rust-lang.org/stable/unstable-book/the-unstable-book.html).
 
+But even `bb8` is cuter, it's still similar astrodroid like `r2d2`.
+
+TBD table
+
 Most likely, the reason is the notorious I/O operations.
-Or it's because of immature libraries or because of nightly build is slower that stable.
+Or it's because of immature libraries, or because of the nightly build is slower that the stable.
 I don't know.
-The fact is, regular developer like me will not gain performance boost from using Rust when creates a web api server.
+The fact is the fact, a regular developer like me will not gain performance boost from using Rust when creates a web api server.
 
 When you create a web api server, the programming language is not the most important thing, apparently.
 
-Pure computations on Rust should be [faster](https://benchmarksgame-team.pages.debian.net/benchmarksgame/which-programs-are-fastest.html).
+Pure computations on Rust should be [faster](https://benchmarksgame-team.pages.debian.net/benchmarksgame/which-programs-are-fastest.html), though.
 
-Even so, I really enjoy to write Rust code. It's a really stir mind and
+I really enjoy to write Rust code. It's a really stirring the mind and
+
+In the next post I will provide more structured review for Rust.
