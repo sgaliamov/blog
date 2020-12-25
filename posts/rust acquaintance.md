@@ -8,31 +8,36 @@ tags: rust, programming languages, reviews, benchmarks, asp.net
 ## Intro
 
 This post is about my first practical experience of acquaintance with the language.
-This may not be an exhaustive overview because I am not a professional Rust developer.
+It can not be an exhaustive overview because I am not a professional `Rust` developer.
 And of course I will not tell anything new about the language.
-But I think people who are interested in Rust should keep the interest and promote it.
+But I think people who are interested in `Rust` should keep the interest and promote it.
+
 To make the post not completely boring, I did a benchmarking to compare implementations based on `r2d2`, `bb8` crates, and `ASP.NET`.
 
-So, after ten years of development and five years after the [official release](https://blog.rust-lang.org/2015/05/15/Rust-1.0.html), it should be mature enough.
+So, after ten years of development and five years after the [official release](https://blog.rust-lang.org/2015/05/15/Rust-1.0.html), `Rust` should be mature enough.
 Right?
 When it has been ranked as the ["The Most Loved Programming Language"](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) for five years in a row, you should definitely try it.
 And I've tried.
 I created two simple projects to learn it.
 
-During my research I've found some interesting facts about Rust.
-First. No one actually knows why the language has this name, and probably even Graydon Hoare, the author of the language, [does not know it](https://www.reddit.com/r/rust/comments/27jvdt/internet_archaeology_the_definitive_endall_source/).
+In my research, I discovered some facts about `Rust` that I found interesting.
+
+First.
+No one really knows why the language has such a name, and it is likely that even Graydon Hoare, the author of the language, [does not know it](https://www.reddit.com/r/rust/comments/27jvdt/internet_archaeology_the_definitive_endall_source/).
 The working version is that it's named after the kind of a [fungi](https://en.wikipedia.org/wiki/Rust_%28fungus%29).
 
-And second. Rust may looks like a revolutionary for some people, but one of the creators of the language [told](https://tim.dreamwidth.org/1784423.html):
+And second.
+Rust may seem revolutionary to some people, but one of the creators of the language [said](https://tim.dreamwidth.org/1784423.html):
 > ... we've tried hard to avoid incorporating new technology into it. We haven't always succeeded at failing to be novel, but we have a rule of thumb of not including any ideas in the language that are new as of the past ten years of programming language research...
 
-And I find it's very wise.
-This days we have so much "hipsters" in the industry, and many projects are doomed from the beginning, just because the main goal of such developers is to "try a new technology" instead of actually to solve a problem.
+And I find it very wise.
+There are so many "hipsters" in the industry these days, and many projects are doomed from the beginning just because the main goal of such developers is "to try out a new technology" rather than to solve a problem.
+I believe that with such a “rusty” logic, the language has a bright future.
 
 ## My first project on Rust
 
 I started with building simple CLI.
-It is an [implementation](https://github.com/sgaliamov/ergo-balance) of a genetic algorithm that looks for an "optimal" balance of keys on a keyboard.
+It is an naive [implementation](https://github.com/sgaliamov/ergo-balance) of a genetic algorithm that looks for an "optimal" balance of keys on a keyboard.
 
 Here is a peace of code from it:
 
@@ -49,7 +54,7 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
 
     mutants.append(population);
 
-    let children: Vec<_> = mutants
+    let offspring: Vec<_> = mutants
         .into_iter()
         .unique()
         .sorted_by(score_cmp)
@@ -58,7 +63,7 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
         .map(|(_, group)| group.collect())
         .collect::<Vec<_>>()
         .into_par_iter()
-        .flat_map(|group| cross(group, context))
+        .flat_map(|group| recombine(group, context))
         .collect::<LettersCollection>()
         .into_iter()
         .unique()
@@ -67,15 +72,15 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
         .take(context.population_size)
         .collect();
 
-    if children.len() == 0 {
+    if offspring.len() == 0 {
         return Err(());
     }
 
-    Ok(children)
+    Ok(offspring)
 }
 ```
 
-It's the core logic of the genetic algorithm.
+It's the core logic of the application.
 It takes some `population` on the input, mutates it, cross the best instances, and returns them.
 Simple as piece of cake.
 
