@@ -12,7 +12,7 @@ It can not be an exhaustive overview because I am not a professional `Rust` deve
 And of course I will not tell anything new about the language.
 But I think people who are interested in `Rust` should keep the interest and promote it.
 
-To make the post not completely boring, I did a benchmarking to compare implementations based on `r2d2`, `bb8` crates, and `ASP.NET`.
+To make the post not completely boring, I did a [benchmarking](#comparison-with-aspnet) to compare the implementations based on `r2d2`, `bb8` crates, and `ASP.NET`.
 
 So, after ten years of development and five years after the [official release](https://blog.rust-lang.org/2015/05/15/Rust-1.0.html), `Rust` should be mature enough.
 Right?
@@ -34,12 +34,12 @@ And I find it very wise.
 There are so many "hipsters" in the industry these days, and many projects are doomed from the beginning just because the main goal of such developers is "to try out a new technology" rather than to solve a problem.
 I believe that with such a “rusty” logic, the language has a bright future.
 
-## My first project on Rust
+## My first Rust project
 
-I started with building simple CLI.
+I started by building a simple CLI.
 It is an naive [implementation](https://github.com/sgaliamov/ergo-balance) of a genetic algorithm that looks for an "optimal" balance of keys on a keyboard.
 
-Here is a peace of code from it:
+Here is a piece of code from it:
 
 ``` rust
 pub fn run(population: &mut LettersCollection, context: &Context) -> Result<LettersCollection, ()> {
@@ -80,18 +80,20 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
 }
 ```
 
-It's the core logic of the application.
-It takes some `population` on the input, mutates it, cross the best instances, and returns them.
-Simple as piece of cake.
+This is  the core logic of the application.
+It takes a certain `population` as input, mutates it, recombines the best offspring, and returns them.
+Piece of cake.
+You don't even need to know `Rust` to understand it.
 
-As you can see, it's easy to read and very expressive.
-Classic imperative or OOP implementation will require much more code.
-And you may notice that it has parallelism on the lines with `into_par_iter`.
-It uses [rayon](https://docs.rs/rayon) crate, and it's the great example of the potential of the language.
-The idea is very similar with [PLINQ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq) in `.NET`.
+As you can see, it is easy to read and very expressive.
+A classic imperative or OOP implementation would require a lot more code.
+And you may notice that it has parallelism enabled on the lines with `into_par_iter`.
+It uses [rayon](https://docs.rs/rayon) crate, and it's a great example of the potential of the language.
+The idea is very similar to [PLINQ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq) in `.NET`.
 
-While writhing this code I was really excited, because it feels like you write on high level language like C# or TypeScript.
-Functional programming capabilities are impressive for the system level language!
+When I wrote this code, I was very impressed because it felt like you were writing in a high-level language like `C#` or `TypeScript`.
+
+Functional programming capabilities are impressive for a system-level language!
 
 ## Comparison with ASP.NET
 
