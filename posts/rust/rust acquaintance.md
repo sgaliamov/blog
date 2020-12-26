@@ -86,14 +86,14 @@ pub fn run(population: &mut LettersCollection, context: &Context) -> Result<Lett
 ```
 
 This is the core logic of the application.
-It takes a certain `population` as the input, mutates it, recombines the best offspring, and returns them for the next iteration.
+It takes a certain population as the input, mutates it, recombines the best offspring, and returns them for the next iteration.
 Piece of cake.
 You don't even need to know `Rust` to understand it!
 
 As you can see, it is easy to read and very expressive.
 A classic imperative or OOP implementation would require a lot more code.
 And you may notice that it has a parallelism enabled on the lines with `into_par_iter`.
-It uses [rayon](https://docs.rs/rayon) crate, and it's a great example of the language's capabilities and extensibility.
+It uses [rayon](https://docs.rs/rayon) crate, and this is a great example of the language's capabilities and extensibility.
 The idea is very similar to `AsParallel` from [PLINQ](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq) in `.NET`.
 
 When I wrote this code, I was very impressed because it felt like you were writing in a high-level language like `C#` or `TypeScript`.
@@ -109,7 +109,7 @@ For this I have implemented a simple [web server](https://github.com/sgaliamov/r
 I also added an endpoint that returns the current date to have some logic without I/O.
 I chose [actix](https://actix.rs/) because it is one of the fastest web frameworks for Rust.
 
-It took me less than an hour to implement the `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs), which is just 55 lines of code, including all blank lines and line breaks, but it took me more than 2 days to implement the Rust version.
+It took me less than an hour to implement the `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/asp.net/NotesApi/Controllers/NotesController.cs), which is just 55 lines of code, including all blank lines and line breaks, but it took me more than 2 days to implement the Rust version.
 This is too much even considering that I am new to this technology stack.
 And the code that I ended up with to is at least twice as verbose.
 
@@ -158,7 +158,7 @@ I thought.
 
 Always profile before optimizing!
 
-I created a simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
+I created a simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/asp.net/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
 And he showed that `ASP.NET` is 60% faster!
 
 ### ASP.NET
@@ -190,7 +190,7 @@ The code that I've got at the end is even more [verbose](https://github.com/sgal
 Apart from the complexity and fights with the compiler, I ran into another annoying Rust quirk.
 In order to use some "obvious" features, like asynchronous closures, you have to use nightly build to enable [unstable features](https://doc.rust-lang.org/stable/unstable-book/the-unstable-book.html).
 
-But even `bb8` is cuter, it is only slightly better.
+But even `bb8` is cuter, it is only slightly better than `r2d2`. ~~Empire~~ Microsoft is still winning.
 
 | Method    | Parallel | Path       |         Mean |       Error |       StdDev |       Median |
 | --------- | -------- | ---------- | -----------: | ----------: | -----------: | -----------: |
@@ -210,5 +210,5 @@ I will be happy if someone tell me how to improve it.
 When you create a web api server, the programming language is not the most important thing, apparently.
 However, pure computations on Rust should be [faster](https://benchmarksgame-team.pages.debian.net/benchmarksgame/which-programs-are-fastest.html).
 
-Even though, I really enjoyed to write Rust code.
-It's a really stirring the mind and
+No matter what, I really enjoyed writing code in Rust.
+I will continue to use it if I need to write efficient calculations or garbage collection will be a problem.
