@@ -1,13 +1,12 @@
 ---
 layout: post
 date: 2020-10-23
-categories: rust review benchmark asp.net
+categories: rust, review; benchmark | asp.net
 comments: true
+title: My first acquaintance with the Rust language
 ---
 
-# My first acquaintance with the Rust language
-
-![Rusted Metal Patterns](https://live.staticflickr.com/4095/4746391656_a4ff32afa6_b.jpg  | height=256)
+<img src="https://live.staticflickr.com/4095/4746391656_a4ff32afa6_b.jpg" alt="Rusted Metal Patterns" height="256">
 
 ["Rusted Metal Patterns"](https://www.flickr.com/photos/99624358@N00/4746391656) by [halseike](https://www.flickr.com/photos/99624358@N00) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)
 

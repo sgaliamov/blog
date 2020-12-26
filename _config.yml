@@ -8,10 +8,17 @@ plainwhite:
   portfolio_image: "assets/yagami.png"
   html_lang: "en"
   disqus_shortname: sgaliamov
+  sitemap: true
+  search: true
   social_links:
     github: sgaliamov
     linkedIn: in/sgaliamov
+  plainwhite:
+    tagline: |
+    First Line.
 
+    Second Line.
+
+    Third Line.
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
