@@ -1,8 +1,7 @@
 ---
-title: Initial commit
-created: 2020-12-24
-categories: general
 layout: post
+title: Initial commit
+categories: general
 date: 2020-12-24
 ---
 

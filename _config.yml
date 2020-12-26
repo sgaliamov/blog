@@ -6,7 +6,7 @@ title: S. Galiamov
 author: sgaliamov
 email: 6alyamov@gmail.com
 show_excerpts: true
-baseurl: "/blog"
+baseurl: /blog
 
 plainwhite:
   name: Salavat Galiamov

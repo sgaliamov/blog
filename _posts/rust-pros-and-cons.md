@@ -1,9 +1,8 @@
 ---
+layout: post
 title: Rust, pros and cons
-created: 2020-10-23
 categories: ["rust", "review", "draft"]
 date: 2020-10-23
-layout: post
 ---
 
 ## Pros
