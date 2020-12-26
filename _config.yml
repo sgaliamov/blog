@@ -1,7 +1,5 @@
 theme: plainwhite
-
 remote_theme: samarsault/plainwhite-jekyll
-
 title: S. Galiamov
 author: sgaliamov
 email: 6alyamov@gmail.com
@@ -15,19 +13,12 @@ plainwhite:
   disqus_shortname: sgaliamov
   sitemap: true
   dark_mode: true
-
   social_links:
     github: sgaliamov
     linkedIn: in/sgaliamov
-
   tagline: |
     yet another
     developer
-
-  condensed_mobile:
-    - home
-    - post
-    - page
 
 plugins:
   - jekyll-seo-tag

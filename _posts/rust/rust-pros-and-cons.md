@@ -1,14 +1,14 @@
 ---
-layout: post
 title: Rust, pros and cons
 categories: ["rust", "review", "draft"]
 created: 2020-10-23
+layout: post
 ---
-
-## Pros
 
 While working and reading The Book I collected things that I like and do not.
 Here is my list. Of course, I may miss some important consents and be very subjective, but it's my list after all.
+
+## Pros
 
 1. **Immutability.**
 1. **Performance.**

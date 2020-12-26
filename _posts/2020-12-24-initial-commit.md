@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Initial commit
 categories: general
-date: 2020-12-24
 created: 2020-12-24
+date: 2020-12-24
+layout: post
 ---
 
 Why do I start this blog?
