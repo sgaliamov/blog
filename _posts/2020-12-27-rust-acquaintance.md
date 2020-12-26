@@ -6,11 +6,10 @@ date: 2020-12-27
 categories: ["rust", "review", "benchmark", "asp.net"]
 ---
 
+This post is about my first practical experience of acquaintance with the language.
+
 <p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;height: 256px" src="https://live.staticflickr.com/7511/16131487998_3b484d34af_b.jpg" alt="Rusty Contraption"><a href="https://www.flickr.com/photos/99649389@N02/16131487998">"Rusty Contraption"</a><span> by <a href="https://www.flickr.com/photos/99649389@N02">darkday.</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=7c061de4-f173-4908-81dd-dd1663a5aa47" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg"/></a></p>
 
-## Intro
-
-This post is about my first practical experience of acquaintance with the language.
 It can not be an exhaustive overview because I am not a professional `Rust` developer.
 And of course I will not tell anything new about the language.
 But I think people who are interested in `Rust` should keep the interest and promote it.
