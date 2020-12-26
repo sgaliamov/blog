@@ -1,6 +1,7 @@
 ---
-created: 2020-12-24
-tags: general
+layout: post
+date: 2020-12-24
+categories: general
 ---
 
 # Initial commit
