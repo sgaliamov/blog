@@ -17,3 +17,6 @@ plainwhite:
   social_links:
     github: sgaliamov
     linkedIn: in/sgaliamov
+
+plugins:
+  - jekyll-remote-theme
