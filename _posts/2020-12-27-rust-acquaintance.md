@@ -3,7 +3,7 @@ layout: post
 title: My first acquaintance with the Rust language
 created: 2020-10-23
 date: 2020-12-27
-categories: ["rust", "review", "benchmark", "asp.net"]
+tags: ["rust", "review", "benchmark", "asp.net"]
 ---
 
 This post is about my first practical experience of acquaintance with the language.

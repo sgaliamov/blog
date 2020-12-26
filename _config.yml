@@ -24,5 +24,10 @@ plainwhite:
     yet another
     developer
 
+  condensed_mobile:
+    - home
+    - post
+    - page
+
 plugins:
   - jekyll-seo-tag
