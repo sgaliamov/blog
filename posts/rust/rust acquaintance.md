@@ -105,12 +105,12 @@ Functional programming capabilities are very impressive for a system-level langu
 Since I'm mostly a `.NET` developer I was curious how it performs in comparison with `ASP.NET` platform.
 I [expected](https://www.techempower.com/benchmarks/#section=data-r19&hw=ph&test=composite) to see that the Rust implementation outperform C#.
 
-To implement `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs) I spend less than hour and it's only 55 lines of code including all empty lines.
-But to implement Rust version I spend 2 days. It's too much, even taking in account that I'm new in this technology stack.
-And it is more verbose at least twice.
+It took me less than an hour to implement the `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs), which is just 55 lines of code, including all blank lines and line breaks, but it took me 2 days to implement the Rust version.
+This is too much even considering that I am new to this technology stack.
+And the code is at least twice as verbose.
 
-I choose `actix` because it is one of the fastest web servers on Rust.
-First, I implemented it with `r2d2`. And because `r2d2_postgres` is synchronous I used `actix_web::web::block` function to run queries in a thread pool.
+I chose [actix](https://actix.rs/) because it is one of the fastest web frameworks for Rust.
+My implementation was originally based on `r2d2`. And since `r2d2_postgres` does not support asynchronous execution, I used the `actix_web::web::block` function to execute requests on the thread pool.
 
 ``` rust
 #[get("/{id}")]
@@ -181,3 +181,30 @@ Pure computations on Rust should be [faster](https://benchmarksgame-team.pages.d
 I really enjoy to write Rust code. It's a really stirring the mind and
 
 In the next post I will provide more structured review for Rust.
+
+### R2D2
+
+| Method    | Parallel | Path  |         Mean |       Error |      StdDev |       Median |
+| --------- | -------- | ----- | -----------: | ----------: | ----------: | -----------: |
+| Benchmark | True     | /date |     8.945 ms |   0.2274 ms |   0.6596 ms |     8.935 ms |
+| Benchmark | False    | /date |    39.317 ms |   0.7753 ms |   1.7969 ms |    38.967 ms |
+| Benchmark | True     |       |   976.429 ms |  51.5924 ms | 152.1214 ms |   966.551 ms |
+| Benchmark | False    |       | 5,042.993 ms | 281.0737 ms | 828.7520 ms | 5,045.977 ms |
+
+### ASP.NET
+
+| Method    | Parallel | Path  |         Mean |       Error |      StdDev |       Median |
+| --------- | -------- | ----- | -----------: | ----------: | ----------: | -----------: |
+| Benchmark | True     | /date |     9.764 ms |   0.1692 ms |   0.1500 ms |     9.713 ms |
+| Benchmark | False    | /date |    43.043 ms |   0.8405 ms |   0.7862 ms |    42.742 ms |
+| Benchmark | True     |       |   589.727 ms |  40.3020 ms | 118.8312 ms |   596.048 ms |
+| Benchmark | False    |       | 3,157.214 ms | 231.7176 ms | 675.9310 ms | 3,165.454 ms |
+
+### BB8
+
+| Method    | Parallel | Path  |         Mean |       Error |       StdDev |       Median |
+| --------- | -------- | ----- | -----------: | ----------: | -----------: | -----------: |
+| Benchmark | True     | /date |     9.054 ms |   0.2258 ms |    0.6478 ms |     8.990 ms |
+| Benchmark | False    | /date |    37.105 ms |   0.7373 ms |    1.6941 ms |    36.482 ms |
+| Benchmark | True     |       |   888.076 ms |  48.6239 ms |   142.605 ms |   867.573 ms |
+| Benchmark | False    |       | 5,031.185 ms | 368.6956 ms | 1,087.107 ms | 4,895.177 ms |
