@@ -1,6 +1,8 @@
 ---
+layout: default
 created: 2020-10-23
 tags: rust, programming languages, reviews, benchmarks, asp.net
+comments: true
 ---
 
 # My first acquaintance with the Rust language

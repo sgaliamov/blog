@@ -1,1 +1,24 @@
-theme: jekyll-theme-tactile
+remote_theme: samarsault/plainwhite-jekyll
+
+plainwhite:
+  name: Salavat Galiamov
+  tagline: yet another developer
+  portfolio_image:  "assets/yagami.png"
+  html_lang: "en"
+  show_excerpts: true
+  navigation:
+  - title: My Work
+    url: "/my-work"
+  - title: Resume
+    url: "/resume"
+  disqus_shortname: sgaliamov
+  social_links:
+    github: sgaliamov
+    linkedIn: in/sgaliamov
+
+  tagline: |
+  First Line.
+
+  Second Line.
+
+  Third Line.
