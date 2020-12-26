@@ -159,7 +159,7 @@ I thought.
 Always profile before optimizing!
 
 I created a simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/asp.net/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
-And he showed that `ASP.NET` is 60% faster!
+And it showed that `ASP.NET` is 60% faster!
 
 ### ASP.NET
 
