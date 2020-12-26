@@ -1,1 +1,24 @@
-theme: jekyll-theme-tactile
+theme: plainwhite
+remote_theme: samarsault/plainwhite-jekyll
+title: S. Galiamov
+author: sgaliamov
+email: 6alyamov@gmail.com
+show_excerpts: true
+baseurl: /blog
+
+plainwhite:
+  name: Salavat Galiamov
+  portfolio_image: "assets/yagami.png"
+  html_lang: "en"
+  disqus_shortname: sgaliamov
+  sitemap: true
+  dark_mode: true
+  social_links:
+    github: sgaliamov
+    linkedIn: in/sgaliamov
+  tagline: |
+    yet another
+    developer
+
+plugins:
+  - jekyll-seo-tag

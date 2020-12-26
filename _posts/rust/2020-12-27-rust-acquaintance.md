@@ -1,17 +1,15 @@
 ---
+title: My first acquaintance with the Rust language
+categories: ["reviews", "benchmarks", "rust", "asp.net"]
 created: 2020-10-23
-tags: rust, programming languages, reviews, benchmarks, asp.net
+date: 2020-12-27
+layout: post
 ---
 
-# My first acquaintance with the Rust language
-
-![Rusted Metal Patterns](https://live.staticflickr.com/4095/4746391656_a4ff32afa6_b.jpg)
-
-["Rusted Metal Patterns"](https://www.flickr.com/photos/99624358@N00/4746391656) by [halseike](https://www.flickr.com/photos/99624358@N00) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)
-
-## Intro
-
 This post is about my first practical experience of acquaintance with the language.
+
+<p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;height: 256px" src="https://live.staticflickr.com/7511/16131487998_3b484d34af_b.jpg" alt="Rusty Contraption"><a href="https://www.flickr.com/photos/99649389@N02/16131487998">"Rusty Contraption"</a><span> by <a href="https://www.flickr.com/photos/99649389@N02">darkday.</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=7c061de4-f173-4908-81dd-dd1663a5aa47" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg"/></a></p>
+
 It can not be an exhaustive overview because I am not a professional `Rust` developer.
 And of course I will not tell anything new about the language.
 But I think people who are interested in `Rust` should keep the interest and promote it.
@@ -161,23 +159,23 @@ Always profile before optimizing!
 I created a simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/asp.net/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
 And it showed that `ASP.NET` is 60% faster!
 
-### ASP.NET
+### ASP.NET benchmark
 
-| Method    | Parallel | Path       |         Mean |       Error |      StdDev |       Median |
-| --------- | -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
-| Benchmark | True     | GET /date  |     9.764 ms |   0.1692 ms |   0.1500 ms |     9.713 ms |
-| Benchmark | False    | GET /date  |    43.043 ms |   0.8405 ms |   0.7862 ms |    42.742 ms |
-| Benchmark | True     | POST & GET |   589.727 ms |  40.3020 ms | 118.8312 ms |   596.048 ms |
-| Benchmark | False    | POST & GET | 3,157.214 ms | 231.7176 ms | 675.9310 ms | 3,165.454 ms |
+| Parallel | Path       |         Mean |       Error |      StdDev |       Median |
+| -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
+| True     | GET /date  |     9.764 ms |   0.1692 ms |   0.1500 ms |     9.713 ms |
+| False    | GET /date  |    43.043 ms |   0.8405 ms |   0.7862 ms |    42.742 ms |
+| True     | POST & GET |   589.727 ms |  40.3020 ms | 118.8312 ms |   596.048 ms |
+| False    | POST & GET | 3,157.214 ms | 231.7176 ms | 675.9310 ms | 3,165.454 ms |
 
-### R2D2
+### R2D2 benchmark
 
-| Method    | Parallel | Path       |         Mean |       Error |      StdDev |       Median |
-| --------- | -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
-| Benchmark | True     | GET /date  |     8.945 ms |   0.2274 ms |   0.6596 ms |     8.935 ms |
-| Benchmark | False    | GET /date  |    39.317 ms |   0.7753 ms |   1.7969 ms |    38.967 ms |
-| Benchmark | True     | POST & GET |   976.429 ms |  51.5924 ms | 152.1214 ms |   966.551 ms |
-| Benchmark | False    | POST & GET | 5,042.993 ms | 281.0737 ms | 828.7520 ms | 5,045.977 ms |
+| Parallel | Path       |         Mean |       Error |      StdDev |       Median |
+| -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
+| True     | GET /date  |     8.945 ms |   0.2274 ms |   0.6596 ms |     8.935 ms |
+| False    | GET /date  |    39.317 ms |   0.7753 ms |   1.7969 ms |    38.967 ms |
+| True     | POST & GET |   976.429 ms |  51.5924 ms | 152.1214 ms |   966.551 ms |
+| False    | POST & GET | 5,042.993 ms | 281.0737 ms | 828.7520 ms | 5,045.977 ms |
 
 Yes, the end point of getting the date is slightly faster on `actix`, but the difference is negligible.
 
@@ -192,12 +190,14 @@ In order to use some "obvious" features, like asynchronous closures, you have to
 
 But even `bb8` is cuter, it is only slightly better than `r2d2`. ~~Empire~~ Microsoft is still winning.
 
-| Method    | Parallel | Path       |         Mean |       Error |       StdDev |       Median |
-| --------- | -------- | ---------- | -----------: | ----------: | -----------: | -----------: |
-| Benchmark | True     | GET /date  |     9.054 ms |   0.2258 ms |    0.6478 ms |     8.990 ms |
-| Benchmark | False    | GET /date  |    37.105 ms |   0.7373 ms |    1.6941 ms |    36.482 ms |
-| Benchmark | True     | POST & GET |   888.076 ms |  48.6239 ms |   142.605 ms |   867.573 ms |
-| Benchmark | False    | POST & GET | 5,031.185 ms | 368.6956 ms | 1,087.107 ms | 4,895.177 ms |
+### BB8 benchmark
+
+| Parallel | Path       |         Mean |       Error |       StdDev |       Median |
+| -------- | ---------- | -----------: | ----------: | -----------: | -----------: |
+| True     | GET /date  |     9.054 ms |   0.2258 ms |    0.6478 ms |     8.990 ms |
+| False    | GET /date  |    37.105 ms |   0.7373 ms |    1.6941 ms |    36.482 ms |
+| True     | POST & GET |   888.076 ms |  48.6239 ms |   142.605 ms |   867.573 ms |
+| False    | POST & GET | 5,031.185 ms | 368.6956 ms | 1,087.107 ms | 4,895.177 ms |
 
 Most likely, the reason is the notorious I/O operations.
 Either it's because of immature libraries, or because nightly builds are slower than stable builds.
