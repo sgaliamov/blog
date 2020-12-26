@@ -1,6 +1,6 @@
 ---
 title: My first acquaintance with the Rust language
-categories: ["rust", "review", "benchmark", "asp.net"]
+categories: ["reviews", "benchmarks", "rust", "asp.net"]
 created: 2020-10-23
 date: 2020-12-27
 layout: post

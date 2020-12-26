@@ -1,6 +1,6 @@
 ---
 title: Rust, pros and cons
-categories: ["rust", "review", "draft"]
+categories: ["reviews", "rust"]
 created: 2020-10-23
 layout: post
 ---
