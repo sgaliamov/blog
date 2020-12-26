@@ -2,6 +2,8 @@ theme: plainwhite
 
 remote_theme: samarsault/plainwhite-jekyll
 
+show_excerpts: true
+
 plainwhite:
   name: Salavat Galiamov
   portfolio_image: "assets/yagami.png"
@@ -9,7 +11,7 @@ plainwhite:
   disqus_shortname: sgaliamov
   sitemap: true
   search: true
-  show_excerpts: true
+
   dark_mode: true
 
   social_links:
