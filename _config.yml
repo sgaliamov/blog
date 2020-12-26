@@ -14,7 +14,6 @@ plainwhite:
   html_lang: "en"
   disqus_shortname: sgaliamov
   sitemap: true
-  search: true
   dark_mode: true
 
   social_links:
