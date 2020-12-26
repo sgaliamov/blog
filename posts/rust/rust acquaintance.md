@@ -103,14 +103,20 @@ Functional programming capabilities are very impressive for a system-level langu
 ## Comparison with ASP.NET
 
 Since I'm mostly a `.NET` developer I was curious how it performs in comparison with `ASP.NET` platform.
-I [expected](https://www.techempower.com/benchmarks/#section=data-r19&hw=ph&test=composite) to see that the Rust implementation outperform C#.
+I [expected](https://www.techempower.com/benchmarks/#section=data-r19&hw=ph&test=composite) to see that the Rust implementation will outperform C#.
 
-It took me less than an hour to implement the `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs), which is just 55 lines of code, including all blank lines and line breaks, but it took me 2 days to implement the Rust version.
-This is too much even considering that I am new to this technology stack.
-And the code is at least twice as verbose.
-
+For this I have implemented a simple [web server](https://github.com/sgaliamov/rust-web-api) that can add and return notes from `PostgreSQL`.
+I also added an endpoint that returns the current date to have some logic without I/O.
 I chose [actix](https://actix.rs/) because it is one of the fastest web frameworks for Rust.
-My implementation was originally based on `r2d2`. And since `r2d2_postgres` does not support asynchronous execution, I used the `actix_web::web::block` function to execute requests on the thread pool.
+
+It took me less than an hour to implement the `.NET` [version](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/NotesApi/Controllers/NotesController.cs), which is just 55 lines of code, including all blank lines and line breaks, but it took me more than 2 days to implement the Rust version.
+This is too much even considering that I am new to this technology stack.
+And the code that I ended up with to is at least twice as verbose.
+
+My implementation was originally based on [r2d2](https://github.com/sfackler/r2d2). It's a generic connection pool for Rust.
+And since `r2d2_postgres` does not support asynchronous execution, I used the `actix_web::web::block` function to execute requests on the thread pool.
+
+Here is the implementation of the `get_note` method:
 
 ``` rust
 #[get("/{id}")]
@@ -145,66 +151,64 @@ async fn get_note(
 }
 ```
 
-Nothing is criminal in this code.
-Yes, it's verbose, but it's clear that it has no over-engineering and overhead.
+There is nothing criminal in this code.
+Yes, it's verbose, but it's clear that there are no over-engineering and overhead costs.
 So it should be fast.
 I thought.
 
-I created simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
-And it showed that `ASP.NET` was even faster!
+Always profile before optimizing!
 
-TBD table
-
-It was a surprise for me.
-I expected to see how Rust will bit C#.
-But I have not noticed significant advantage of Rust.
-
-I thought that the reason is because I do not have normal asynchronicity.
-Probably I did something wrong.
-I will be happy if someone tell me how to improve it.
-
-So I decided to try `bb8`. The code that I've got at the end is even more [verbose](https://github.com/sgaliamov/rust-web-api/blob/master/src/bin/bb8.rs). So much, that I even shame to show it here. Except of complexity and fights with the compiler, I faced another not nice thing about Rust. To use some "obvious" features, like asynchronous closures, you have to use nightly build to enable [unstable features](https://doc.rust-lang.org/stable/unstable-book/the-unstable-book.html).
-
-But even `bb8` is cuter, it's still similar astrodroid like `r2d2`.
-
-TBD table
-
-Most likely, the reason is the notorious I/O operations.
-Or it's because of immature libraries, or because of the nightly build is slower that the stable.
-I don't know.
-The fact is the fact, a regular developer like me will not gain performance boost from using Rust when creates a web api server.
-
-When you create a web api server, the programming language is not the most important thing, apparently.
-
-Pure computations on Rust should be [faster](https://benchmarksgame-team.pages.debian.net/benchmarksgame/which-programs-are-fastest.html), though.
-
-I really enjoy to write Rust code. It's a really stirring the mind and
-
-In the next post I will provide more structured review for Rust.
-
-### R2D2
-
-| Method    | Parallel | Path  |         Mean |       Error |      StdDev |       Median |
-| --------- | -------- | ----- | -----------: | ----------: | ----------: | -----------: |
-| Benchmark | True     | /date |     8.945 ms |   0.2274 ms |   0.6596 ms |     8.935 ms |
-| Benchmark | False    | /date |    39.317 ms |   0.7753 ms |   1.7969 ms |    38.967 ms |
-| Benchmark | True     |       |   976.429 ms |  51.5924 ms | 152.1214 ms |   966.551 ms |
-| Benchmark | False    |       | 5,042.993 ms | 281.0737 ms | 828.7520 ms | 5,045.977 ms |
+I created a simple benchmarking [project](https://github.com/sgaliamov/rust-web-api/blob/master/dotnet/NotesApi/Benchmark/Program.cs) using [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html).
+And he showed that `ASP.NET` is 60% faster!
 
 ### ASP.NET
 
-| Method    | Parallel | Path  |         Mean |       Error |      StdDev |       Median |
-| --------- | -------- | ----- | -----------: | ----------: | ----------: | -----------: |
-| Benchmark | True     | /date |     9.764 ms |   0.1692 ms |   0.1500 ms |     9.713 ms |
-| Benchmark | False    | /date |    43.043 ms |   0.8405 ms |   0.7862 ms |    42.742 ms |
-| Benchmark | True     |       |   589.727 ms |  40.3020 ms | 118.8312 ms |   596.048 ms |
-| Benchmark | False    |       | 3,157.214 ms | 231.7176 ms | 675.9310 ms | 3,165.454 ms |
+| Method    | Parallel | Path       |         Mean |       Error |      StdDev |       Median |
+| --------- | -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
+| Benchmark | True     | GET /date  |     9.764 ms |   0.1692 ms |   0.1500 ms |     9.713 ms |
+| Benchmark | False    | GET /date  |    43.043 ms |   0.8405 ms |   0.7862 ms |    42.742 ms |
+| Benchmark | True     | POST & GET |   589.727 ms |  40.3020 ms | 118.8312 ms |   596.048 ms |
+| Benchmark | False    | POST & GET | 3,157.214 ms | 231.7176 ms | 675.9310 ms | 3,165.454 ms |
 
-### BB8
+### R2D2
 
-| Method    | Parallel | Path  |         Mean |       Error |       StdDev |       Median |
-| --------- | -------- | ----- | -----------: | ----------: | -----------: | -----------: |
-| Benchmark | True     | /date |     9.054 ms |   0.2258 ms |    0.6478 ms |     8.990 ms |
-| Benchmark | False    | /date |    37.105 ms |   0.7373 ms |    1.6941 ms |    36.482 ms |
-| Benchmark | True     |       |   888.076 ms |  48.6239 ms |   142.605 ms |   867.573 ms |
-| Benchmark | False    |       | 5,031.185 ms | 368.6956 ms | 1,087.107 ms | 4,895.177 ms |
+| Method    | Parallel | Path       |         Mean |       Error |      StdDev |       Median |
+| --------- | -------- | ---------- | -----------: | ----------: | ----------: | -----------: |
+| Benchmark | True     | GET /date  |     8.945 ms |   0.2274 ms |   0.6596 ms |     8.935 ms |
+| Benchmark | False    | GET /date  |    39.317 ms |   0.7753 ms |   1.7969 ms |    38.967 ms |
+| Benchmark | True     | POST & GET |   976.429 ms |  51.5924 ms | 152.1214 ms |   966.551 ms |
+| Benchmark | False    | POST & GET | 5,042.993 ms | 281.0737 ms | 828.7520 ms | 5,045.977 ms |
+
+Yes, the end point of getting the date is slightly faster on `actix`, but the difference is negligible.
+
+It was a surprise for me.
+I thought the reason was because I don't have normal async.
+
+So I decided to try [bb8](https://docs.rs/bb8/0.6.2/bb8/).
+It's similar to `r2d2`, but designed for asynchronous connections.
+The code that I've got at the end is even more [verbose](https://github.com/sgaliamov/rust-web-api/blob/master/src/bin/bb8.rs).
+Apart from the complexity and fights with the compiler, I ran into another annoying Rust quirk.
+In order to use some "obvious" features, like asynchronous closures, you have to use nightly build to enable [unstable features](https://doc.rust-lang.org/stable/unstable-book/the-unstable-book.html).
+
+But even `bb8` is cuter, it is only slightly better.
+
+| Method    | Parallel | Path       |         Mean |       Error |       StdDev |       Median |
+| --------- | -------- | ---------- | -----------: | ----------: | -----------: | -----------: |
+| Benchmark | True     | GET /date  |     9.054 ms |   0.2258 ms |    0.6478 ms |     8.990 ms |
+| Benchmark | False    | GET /date  |    37.105 ms |   0.7373 ms |    1.6941 ms |    36.482 ms |
+| Benchmark | True     | POST & GET |   888.076 ms |  48.6239 ms |   142.605 ms |   867.573 ms |
+| Benchmark | False    | POST & GET | 5,031.185 ms | 368.6956 ms | 1,087.107 ms | 4,895.177 ms |
+
+Most likely, the reason is the notorious I/O operations.
+Either it's because of immature libraries, or because nightly builds are slower than stable builds.
+I don't know.
+The fact remains.
+An average developer like me won't get the performance gain from using Rust when building a web api server.
+Probably I did something wrong.
+I will be happy if someone tell me how to improve it.
+
+When you create a web api server, the programming language is not the most important thing, apparently.
+However, pure computations on Rust should be [faster](https://benchmarksgame-team.pages.debian.net/benchmarksgame/which-programs-are-fastest.html).
+
+Even though, I really enjoyed to write Rust code.
+It's a really stirring the mind and

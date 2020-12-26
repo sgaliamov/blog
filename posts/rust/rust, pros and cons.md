@@ -1,3 +1,8 @@
+---
+created: 2020-10-23
+tags: rust, programming languages, reviews, draft
+---
+
 # Rust, pros and cons
 
 ## Pros
