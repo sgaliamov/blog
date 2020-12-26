@@ -9,6 +9,8 @@ plainwhite:
   disqus_shortname: sgaliamov
   sitemap: true
   search: true
+  show_excerpts: true
+  dark_mode: true
 
   social_links:
     github: sgaliamov
