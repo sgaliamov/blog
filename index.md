@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Index
 ---
 
 1. [Initial commit](posts/initial-commit.md).

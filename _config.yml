@@ -4,7 +4,6 @@ remote_theme: samarsault/plainwhite-jekyll
 
 plainwhite:
   name: Salavat Galiamov
-  tagline: yet another developer
   portfolio_image: "assets/yagami.png"
   html_lang: "en"
   disqus_shortname: sgaliamov
@@ -16,9 +15,8 @@ plainwhite:
     linkedIn: in/sgaliamov
 
   tagline: |
-    First Line.
-    Second Line.
-    Third Line.
+    yet another
+    developer
 
 plugins:
   - jekyll-seo-tag

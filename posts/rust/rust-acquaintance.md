@@ -1,9 +1,10 @@
 ---
-layout: post
-date: 2020-10-23
-categories: rust, review; benchmark | asp.net
-comments: true
 title: My first acquaintance with the Rust language
+layout: post
+created: 2020-10-23
+date: 2020-12-26
+categories: ["rust", "review", "benchmark", "asp.net"]
+comments: true
 ---
 
 <img src="https://live.staticflickr.com/4095/4746391656_a4ff32afa6_b.jpg" alt="Rusted Metal Patterns" height="256">
