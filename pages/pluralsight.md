@@ -119,7 +119,7 @@ The list of courses that I took on Pluralsight.
 1. [Microsoft Azure: The Big Picture](https://app.pluralsight.com/library/courses/microsoft-azure-big-picture/).\
    Just outdated.
 1. [Design Authorization for Microsoft Azure](https://app.pluralsight.com/library/courses/microsoft-azure-authorization-design/table-of-contents).\
-   It did not show how to use RBAC properly.
+   It does not show how to use RBAC properly.
 
 ## Dropped
 
