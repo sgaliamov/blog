@@ -16,6 +16,12 @@ plainwhite:
   social_links:
     github: sgaliamov
     linkedIn: in/sgaliamov
+  navigation:
+    - title: Pluralsight
+      url: "/pluralsight.html"
+    - title: Medium
+      url: "https://sgaliamov.medium.com/"
+
   tagline: |
     yet another
     developer
