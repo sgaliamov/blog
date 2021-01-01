@@ -73,7 +73,7 @@ The list of courses that I took on Pluralsight.
 1. [Building ASP.NET Web API OData Services](https://app.pluralsight.com/library/courses/aspnetwebapi-odata/table-of-contents).
 1. [Python Fundamentals](https://app.pluralsight.com/library/courses/python-fundamentals/table-of-contents).
 1. [ExtJS Desktop Fundamentals](https://app.pluralsight.com/library/courses/extjs-desktop-fundamentals/table-of-contents).\
-   `ExtJS` sucks.
+   ExtJS sucks. Never use it again.
 1. [F# Fundamentals](https://app.pluralsight.com/library/courses/fsharp-fundamentals/table-of-contents).
 1. [Microservices Architecture](https://app.pluralsight.com/library/courses/microservices-architecture/table-of-contents).
 1. [Building Applications with React and Flux](https://app.pluralsight.com/library/courses/react-flux-building-applications/table-of-contents).
