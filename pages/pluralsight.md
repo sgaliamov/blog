@@ -6,7 +6,7 @@ The list of courses that I took on Pluralsight.
 
 1. [AngularJS Patterns: Clean Code](https://app.pluralsight.com/library/courses/angularjs-patterns-clean-code/table-of-contents).\
    Great course for everyone who still uses `AngularJs`.\
-   The biggest achievement of this course is the unified [style guides](https://github.com/johnpapa/angular-styleguide) for AngularJs framework.
+   The biggest achievement of this course is unified [style guides](https://github.com/johnpapa/angular-styleguide) for AngularJs framework.
 1. [AngularJS Directives Fundamentals](https://app.pluralsight.com/library/courses/angularjs-directive-fundamentals/table-of-contents).
 1. [Introduction to Protractor](https://app.pluralsight.com/library/courses/protractor-introduction/table-of-contents).
 1. [Introduction to OAuth2, OpenID Connect and JSON Web Tokens (JWT).](https://app.pluralsight.com/library/courses/oauth2-json-web-tokens-openid-connect-introduction/table-of-contents).
@@ -35,7 +35,7 @@ The list of courses that I took on Pluralsight.
 1. [.NET Internals and Advanced Debugging Techniques](https://app.pluralsight.com/library/courses/dotnet-internals-adv-debug/table-of-contents)..\
    Good practical samples how to debug on a low level.
 1. [F# Jumpstart](https://app.pluralsight.com/library/courses/fsharp-jumpstart/table-of-contents).\
-   Good for beginners, does not reveal some important topics like `Type Providers` and working in a real scenarios, but it's fine for a 1.5 hours course.
+   Good for beginners, does not reveal some important topics like `Type Providers` and working in a real world scenarios, but it's fine for a 1.5 hours course.
 1. [Microsoft Azure API Management Essentials](https://app.pluralsight.com/library/courses/microsoft-azure-api-management-essentials/table-of-contents).\
    Enough to understand Azure API Management.
 1. [Building Scalable APIs with GraphQL](https://app.pluralsight.com/library/courses/graphql-scalable-apis/table-of-contents).
@@ -61,7 +61,7 @@ The list of courses that I took on Pluralsight.
 1. [MSIL for the C# Developer](https://app.pluralsight.com/library/courses/msil-csharp-developer/table-of-contents).\
    It's a very good start to earn `MSIL`.
 1. [Making .NET Applications Faster](https://app.pluralsight.com/library/courses/making-dotnet-applications-faster/table-of-contents).\
-   Contains nice tricks how to implement generic unsafe pointer with IL code emission.
+   Contains a nice trick how to implement generic unsafe pointer with IL code emission.
 1. [Making .NET Applications Even Faster](https://app.pluralsight.com/library/courses/making-dotnet-applications-even-faster/).
 1. [React.js: Getting Started](https://app.pluralsight.com/library/courses/react-js-getting-started/).
 1. [AWS Developer: The Big Picture](https://app.pluralsight.com/library/courses/aws-developer-big-picture/).
@@ -79,10 +79,12 @@ The list of courses that I took on Pluralsight.
 1. [Building Applications with React and Flux](https://app.pluralsight.com/library/courses/react-flux-building-applications/table-of-contents).
 1. [Documenting an ASP.NET Core API with OpenAPI / Swagger](https://app.pluralsight.com/library/courses/aspdotnet-core-api-openapi-swagger/table-of-contents).
 1. [Microsoft Azure DevOps Engineer: Leveraging ARM Templates for Infrastructure](https://app.pluralsight.com/library/courses/microsoft-azure-arm-templates-infrastructure-devops/table-of-contents).\
-   Good course to understand `ARM` templates. But the course is not deep enough.
+   Good course to understand `ARM` templates.\
+   But the course is not deep enough.
 1. [Searching and Analyzing Data with Elasticsearch: Getting Started](https://app.pluralsight.com/library/courses/elasticsearch-analyzing-data/table-of-contents).\
    The course started very well but after it becomes very ordinary.\
-   The author does not cover really important topics about `Lucene` engine. But still, it's a good intro to `Elasticsearch`.
+   The author does not cover really important topics about `Lucene` engine.\
+   But still, it's a good intro to `Elasticsearch`.
 1. [Haskell Fundamentals Part 1](https://app.pluralsight.com/library/courses/haskell-fundamentals-part1/table-of-contents).\
    `Haskell` is a nice language, but the course did not really convince me to start use it.\
    `F#` is a better option for `.net` developers still.
@@ -107,7 +109,8 @@ The list of courses that I took on Pluralsight.
    Maybe useful for a novice.
 1. [AngularJS Best Practices](https://app.pluralsight.com/library/courses/angular-best-practices/table-of-contents).
 1. [Modern, Modular JavaScript with SystemJS and jspm](https://app.pluralsight.com/library/courses/javascript-systemjs-jspm/table-of-contents).\
-   Technically, it's a great course about `SystemJS`. But seriously? 7:25 hours for the technology that is outdated now?
+   Technically, it's a great course about `SystemJS`.\
+   But seriously? 7:25 hours for the technology that is outdated now?
 1. [EF Core 1.0: First Look](https://app.pluralsight.com/library/courses/play-by-play-ef-core-1-0-first-look-julie-lerman/table-of-contents).\
    Not much about EF Core itself.
 1. [Domain-Driven Design Fundamentals](https://app.pluralsight.com/library/courses/domain-driven-design-fundamentals/table-of-contents).\
