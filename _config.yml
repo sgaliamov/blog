@@ -18,8 +18,8 @@ plainwhite:
     linkedIn: in/sgaliamov
   navigation:
     - title: Pluralsight
-      url: "/pluralsight.html"
-    - title: Medium
+      url: "/pages/pluralsight.html"
+    - title: Blog on medium.com
       url: "https://sgaliamov.medium.com/"
 
   tagline: |

@@ -1,5 +1,7 @@
 # PluralSight Courses
 
+List of courses that I took on Pluralsight.
+
 ## Finished courses
 
 ### ★★★ Great courses that everyone must finish if he interested about a subject
