@@ -104,6 +104,6 @@ There are some small limitations that bother me:
 
 As a bonus, you will get a nice looking terminal in VSCode.
 
-<img src="https://sgaliamov.github.io/blog/assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
+![VSCode Terminal](../assets/vscode-terminal.png)
 
 More details you can find on the [documentation page](https://docs.microsoft.com/en-us/windows/terminal/).
