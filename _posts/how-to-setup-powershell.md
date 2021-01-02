@@ -6,9 +6,9 @@ date:
 layout: post
 ---
 
-In this small post I [show](#step-by-step-instruction) how to configure Powerlines for powershell and Windows Terminal.
+In this small post I [show](#step-by-step-instruction) how to configure `Powerlines` for `PowerShell Core` and `Windows Terminal`.
 
-![Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/images/overview.png)
+<img src="https://docs.microsoft.com/en-us/windows/terminal/images/overview.png" alt="Windows Terminal" height="256px">
 
 Default shells on Windows are far from perfect.
 Very, very far, to put it mildly.
@@ -42,8 +42,8 @@ There are some small limitations that bother me:
 
 ## Step by step instruction
 
-1. Install [Cascadia](https://github.com/microsoft/cascadia-code) font.
-You need exactly `Cascadia Code PL` version because it has ligatures and powerline symbols.
+1. Install [Cascadia](https://github.com/microsoft/cascadia-code) font.\
+   You need exactly `Cascadia Code PL` version because it has ligatures and powerline symbols.
 1. Install `Windows Terminal`. You can use `Windows Store`, but I prefer to use a console:
 
    ``` ps1
@@ -58,41 +58,53 @@ You need exactly `Cascadia Code PL` version because it has ligatures and powerli
    Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
    ```
 
-1. If you get something like `WARNING: The version '2.1.0' of module 'PSReadLine' is currently in use. Retry the operation after closing the applications.` do it from `cmd`:
+1. If you get something like `WARNING: The version '2.1.0' of module 'PSReadLine' is currently in use. Retry the operation after closing the applications.`, do it from `cmd`:
 
    ``` cmd
    pwsh -Command "Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck"
    ```
 
-1. Edit settings:
+1. Press `Ctrl+,` in `Windows Terminal` and place the following configuration to the settings:
 
-``` json
-"profiles": {
- "defaults": {
-   "colorScheme": "One Half Dark",
-   "useAcrylic": true,
-   "acrylicOpacity": 0.9,
-   "fontFace": "Cascadia Code PL",
- },
-```
+   ``` json
+   ...
+   "profiles": {
+      "defaults": {
+         "colorScheme": "One Half Dark",
+         "useAcrylic": true,
+         "acrylicOpacity": 0.9,
+         "fontFace": "Cascadia Code PL",
+      },
+      "list": [
+   ...
+   ```
 
-1. Open profile notepad $PROFILE
-1. Put there
+   If you don't want to have the same settings for all profiles, you can apply it only for `PowerShell`.
 
-``` ps1
-# Shows navigable menu of all options when hitting Tab
-Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+1. Open `PowerShell Core` profile in your favorite editor. You can find it here `C:\Users\<your user name>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`. Or you can run in `PowerShell Core`:
 
-# Autocompletion for arrow keys
-Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
-Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+   ``` ps1
+   notepad $PROFILE
+   ```
 
-# Configure Powerlines
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
-```
+1. Put there:
+
+   ``` ps1
+   # Shows navigable menu of all options when hitting Tab
+   Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+   # Autocompletion for arrow keys
+   Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+   Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+   # Configure Powerlines
+   Import-Module posh-git
+   Import-Module oh-my-posh
+   Set-Theme Paradox
+   ```
 
 As a bonus you will get nice looking terminal in VSCode.
+
+<img src="assets/../../assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
 
 More details you can find on the [documentation page](https://docs.microsoft.com/en-us/windows/terminal/).
