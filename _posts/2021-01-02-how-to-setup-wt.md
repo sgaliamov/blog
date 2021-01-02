@@ -8,7 +8,7 @@ layout: post
 
 In this small post I [show](#step-by-step-instruction) how to configure `Powerlines` for `PowerShell Core` and `Windows Terminal`.
 
-<img src="assets/wt-overview.png" alt="Windows Terminal" height="256px">
+<img src="https://sgaliamov.github.io/blog/assets/wt-overview.png" alt="Windows Terminal" height="256px">
 
 Default shells on Windows are far from perfect.
 Very, very far, to put it mildly.
@@ -105,6 +105,6 @@ There are some small limitations that bother me:
 
 As a bonus, you will get a nice looking terminal in VSCode.
 
-<img src="assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
+<img src="_assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
 
 More details you can find on the [documentation page](https://docs.microsoft.com/en-us/windows/terminal/).
