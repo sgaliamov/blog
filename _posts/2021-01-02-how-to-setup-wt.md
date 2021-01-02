@@ -2,13 +2,13 @@
 title: How to get a decent terminal for Windows
 categories: general
 created: 2021-01-01
-date:
+date: 2021-01-02
 layout: post
 ---
 
 In this small post I [show](#step-by-step-instruction) how to configure `Powerlines` for `PowerShell Core` and `Windows Terminal`.
 
-<img src="https://docs.microsoft.com/en-us/windows/terminal/images/overview.png" alt="Windows Terminal" height="256px">
+<img src="assets/../../assets/wt-overview.png" alt="Windows Terminal" height="256px">
 
 Default shells on Windows are far from perfect.
 Very, very far, to put it mildly.
