@@ -58,7 +58,11 @@ There are some small limitations that bother me:
    Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
    ```
 
-1. If you get something like `WARNING: The version '2.1.0' of module 'PSReadLine' is currently in use. Retry the operation after closing the applications.`, do it from `cmd`:
+1. If you get something like
+
+   > WARNING: The version '2.1.0' of module 'PSReadLine' is currently in use. Retry the operation after closing the applications.
+
+   do it from `cmd`:
 
    ``` cmd
    pwsh -Command "Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck"
@@ -81,12 +85,7 @@ There are some small limitations that bother me:
 
    If you don't want to have the same settings for all profiles, you can apply them only for `PowerShell`.
 
-1. Open or create `PowerShell Core` profile in your favorite editor. You can find it here `C:\Users\<your user name>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`. Or you can run in `PowerShell Core`:
-
-   ``` ps1
-   notepad $PROFILE
-   ```
-
+1. Open or create `PowerShell Core` profile in your favorite editor. You can find it here `C:\Users\<your user name>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`. Or you can just run `notepad $PROFILE` in `PowerShell Core`.
 1. Put there:
 
    ``` ps1
@@ -105,6 +104,6 @@ There are some small limitations that bother me:
 
 As a bonus, you will get a nice looking terminal in VSCode.
 
-<img src="_assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
+<img src="https://sgaliamov.github.io/blog/assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
 
 More details you can find on the [documentation page](https://docs.microsoft.com/en-us/windows/terminal/).
