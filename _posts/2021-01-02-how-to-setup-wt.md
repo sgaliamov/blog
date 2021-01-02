@@ -1,5 +1,5 @@
 ---
-title: How to configure decent terminal for Windows
+title: How to get a decent terminal for Windows
 categories: general
 created: 2021-01-01
 date:
@@ -50,7 +50,7 @@ There are some small limitations that bother me:
    choco install microsoft-windows-terminal
    ```
 
-1. Run the following commands in `Powershell`:
+1. Run the following commands in `PowerShell Core`:
 
    ``` ps1
    Install-Module posh-git -Scope CurrentUser
@@ -64,7 +64,7 @@ There are some small limitations that bother me:
    pwsh -Command "Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck"
    ```
 
-1. Press `Ctrl+,` in `Windows Terminal` and place the following configuration to the settings:
+1. Press `Ctrl+,` in `Windows Terminal` and put the following configuration to the settings:
 
    ``` json
    ...
@@ -79,9 +79,9 @@ There are some small limitations that bother me:
    ...
    ```
 
-   If you don't want to have the same settings for all profiles, you can apply it only for `PowerShell`.
+   If you don't want to have the same settings for all profiles, you can apply them only for `PowerShell`.
 
-1. Open `PowerShell Core` profile in your favorite editor. You can find it here `C:\Users\<your user name>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`. Or you can run in `PowerShell Core`:
+1. Open or create `PowerShell Core` profile in your favorite editor. You can find it here `C:\Users\<your user name>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`. Or you can run in `PowerShell Core`:
 
    ``` ps1
    notepad $PROFILE
@@ -103,7 +103,7 @@ There are some small limitations that bother me:
    Set-Theme Paradox
    ```
 
-As a bonus you will get nice looking terminal in VSCode.
+As a bonus, you will get a nice looking terminal in VSCode.
 
 <img src="assets/../../assets/vscode-terminal.png" alt="VSCode Terminal" height="256px">
 
