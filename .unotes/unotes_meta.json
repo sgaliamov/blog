@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "_posts": {
+      "name": "_posts",
+      "isOrdered": true,
+      "folders": {
+        "rust": {
+          "name": "rust",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {
+        "how-to-setup-powershell": 0,
+        "2020-12-24-initial-commit": 1
+      }
+    },
+    "assets": {
+      "name": "assets",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "pages": {
+      "name": "pages",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {
+    "readme": 0,
+    "index": 1
+  }
+}

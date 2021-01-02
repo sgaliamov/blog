@@ -110,7 +110,7 @@ We definitely need better languages than we have now.
 The complexity and monstrosity of mainstream languages push people to look for alternatives and create new languages like `Rust` or `Go`.
 So in the near future I expect to see more languages with borrow checker.
 
-Rust is salvatory for those developers who want to jump into system programming but don't want to invest time into C++.
+Rust is a salvatore for those developers who want to jump into system programming but don't want to invest time into C++.
 If you already formed developer, then switching from high level language to low level will make you junior for a year.
 But with Rust we all more or less in equal conditions.
 It's new growing ecosystem where it is not to late to jump into.

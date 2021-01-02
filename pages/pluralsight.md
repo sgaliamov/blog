@@ -9,7 +9,7 @@ The list of courses that I took on Pluralsight.
    The biggest achievement of this course is unified [style guides](https://github.com/johnpapa/angular-styleguide) for AngularJs framework.
 1. [AngularJS Directives Fundamentals](https://app.pluralsight.com/library/courses/angularjs-directive-fundamentals/table-of-contents).
 1. [Introduction to Protractor](https://app.pluralsight.com/library/courses/protractor-introduction/table-of-contents).
-1. [Introduction to OAuth2, OpenID Connect and JSON Web Tokens (JWT).](https://app.pluralsight.com/library/courses/oauth2-json-web-tokens-openid-connect-introduction/table-of-contents).
+1. [Introduction to OAuth2, OpenID Connect and JSON Web Tokens (JWT)](https://app.pluralsight.com/library/courses/oauth2-json-web-tokens-openid-connect-introduction/table-of-contents).
 1. [Electron Fundamentals](https://app.pluralsight.com/library/courses/electron-fundamentals/table-of-contents).
 1. [A Better CSS: LESS and SASS](https://app.pluralsight.com/library/courses/better-css/table-of-contents).\
    You will never want to use raw `css` after.
