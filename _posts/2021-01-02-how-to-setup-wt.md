@@ -35,8 +35,8 @@ And it looks very promising:
 But it's not perfect yet.
 There are some small limitations that bother me:
 
-1. You cannot change size of a pane.
-1. You cannot pin tabs to bottom.
+1. You cannot resize a pane.
+1. You cannot pin tabs to the bottom.
 1. Urls are not clickable.
 1. It does not have good autocompletion. It just uses capabilities of a shell.
 

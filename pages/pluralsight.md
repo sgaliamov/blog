@@ -100,6 +100,9 @@ The list of courses that I took on Pluralsight.
 1. [Microsoft Azure Solutions Architect: Implement a Virtual Networking Strategy](https://app.pluralsight.com/library/courses/microsoft-azure-solutions-architect-implement-virtual-networking-strategy/table-of-contents).\
    It jumps too fast into the topic.\
    You need some background to understand the material.
+1. [Design a Networking Strategy for Microsoft Azure](https://app.pluralsight.com/library/courses/microsoft-azure-networking-strategy-design/table-of-contents)\
+   Many topics have been covered, some of them in detail and with good examples.\
+   But some of them were very superficially covered and deserve their own course.
 
 ## ★ I learned nothing new on these courses or really did not like it for some reasons
 
