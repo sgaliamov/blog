@@ -6,6 +6,7 @@
     "Hoare",
     "MSIL",
     "PLINQ",
+    "RAII",
     "Readline",
     "actix",
     "aspnet",

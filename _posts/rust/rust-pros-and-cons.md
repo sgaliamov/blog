@@ -12,8 +12,12 @@ Here is my list. Of course, I may miss some important consents and be very subje
 
 1. **Immutability.**
 1. **Performance.**
-1. **Simple, minimalistic language.** I love C# but it growing so much last years. I wish Microsoft will do something like JetBrains did with Kotlin. Personally I think we need fresh blood in `.NET`.
-1. **Takes a lot from FP**: If you think that OOP is the only right way to design software, you are very wrong. and if you persist in this, the fate of the dinosaurs awaits you. You will have to maintain old legacy systems, like someone maintain COBOL code now, while rest of the world creates new shiny projects.
+1. **Simple, minimalistic language.** I love C# but it growing so much last years.\
+   I wish Microsoft will do something like JetBrains did with Kotlin.\
+   Personally I think we need reboot the main `.NET`.
+1. **Takes a lot from FP**: If you think that OOP is the only right way to design software, you are very wrong.\
+   And if you persist in this, the fate of the dinosaurs awaits you.\
+   You will have to maintain old legacy systems, like someone maintain COBOL code now, while rest of the world creates new shiny projects.
    1. shadowing.
    1. strong pattern matching.
    1. immutability. In C# we can define immutability using `readonly` keyword, and we have to define it on design time. with Rust you can decide on the moment whe you use it.
@@ -30,7 +34,10 @@ Here is my list. Of course, I may miss some important consents and be very subje
 1. **No `nulls`!**
 1. **No exceptions.**
 1. **Generics**.
-1. **Traits** better that interface. Because you can extend any type without changing it. New traits can be implemented for existing types.
+1. **Traits** better that interface.\
+   Because you can extend any type without changing it.
+   New traits can be implemented for existing types.
+   You can define a trait for a whole type.
 1. Build-in **test framework**. It's interesting idea to have tests mixed with the code. It allows write unit tests much faster. Gives 1re information about intentions. And gives access to internal implementation.
 1. **Tree shaking?**
 1. **async/.await!**
@@ -89,12 +96,15 @@ Here is my list. Of course, I may miss some important consents and be very subje
 
 1. It's not clear when object is moved or copied. `let actual = foo(s);` it depends on whether `s` has `Copy` trait.
 1. To get the most interesting things, like async closures, you have to use a nightly build. What is not safe in perspective.
+1. Strange constructs like `PhantomData`.
+1. Hard to do refactoring.\
+   Basically you will have to rewrite your code.
+1. Harder to use traits in methods.\
+   Have to use `dyn` or define life scope explicitly.
 
 ## Summary
 
 Implementing two sample projects does not make me expert.
-
-
 
 Rust is a good language for system level developers who tired from C and C++.
 
