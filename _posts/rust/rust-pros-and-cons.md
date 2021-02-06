@@ -101,6 +101,7 @@ Here is my list. Of course, I may miss some important consents and be very subje
    Basically you will have to rewrite your code.
 1. Harder to use traits in methods.\
    Have to use `dyn` or define life scope explicitly.
+1. Don't get int overflow error.
 
 ## Summary
 
