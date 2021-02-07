@@ -1,16 +1,21 @@
 {
   "cSpell.words": [
+    "Capewell",
+    "Carpalx",
     "Cascadia",
     "Cmder",
+    "Colemak",
     "Graydon",
     "Hoare",
     "MSIL",
     "PLINQ",
+    "RAII",
     "Readline",
     "actix",
     "aspnet",
     "astrodroid",
     "choco",
+    "ddos",
     "disqus",
     "plainwhite",
     "pluralsight",
@@ -21,6 +26,8 @@
     "samarsault",
     "sgaliamov",
     "stackoverflow",
-    "yagami"
-  ]
+    "yagami",
+    "инстанциируются"
+  ],
+  "cSpell.enabled": true
 }
