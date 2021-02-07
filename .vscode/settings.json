@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
+    "Capewell",
+    "Carpalx",
     "Cascadia",
     "Cmder",
+    "Colemak",
     "Graydon",
     "Hoare",
     "MSIL",
@@ -25,5 +28,6 @@
     "stackoverflow",
     "yagami",
     "инстанциируются"
-  ]
+  ],
+  "cSpell.enabled": true
 }
