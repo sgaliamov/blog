@@ -89,13 +89,6 @@ There are some small limitations that bother me:
 1. Put there:
 
    ``` ps1
-   # Shows navigable menu of all options when hitting Tab
-   Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-
-   # Autocompletion for arrow keys
-   Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
-   Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
-
    # Configure Powerlines
    Import-Module posh-git
    Import-Module oh-my-posh

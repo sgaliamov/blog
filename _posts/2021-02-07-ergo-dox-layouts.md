@@ -101,7 +101,7 @@ What I find important:
     This is really annoying.
     But if you type in one language only this is still relevant to you.
 
-1. <ins>Estimation is based on "effort"</ins> that you have to apply when you press a key <ins>and a distance</ins> between two taps. This distance factor helps keep most commonly used pairs close to each other.
+1. <ins>Estimation is based on an "effort"</ins> that you have to apply when you press a key <ins>and a distance</ins> between two taps. This distance factor helps keep most commonly used pairs close to each other.
 
 Having all this requirements I started [this](https://github.com/sgaliamov/ergo-layouts) project.
 In addition, I planned to try F#, and scope of this challenge was perfect for this.
@@ -146,7 +146,7 @@ Here is the summary tables:
 | Dvorak          | 54172386.37 | 65.015753   | 134566516.9 | 45259664.53 |
 | Tnwmlc          | 57007114.11 | 40.363025   | 125989034.5 | 61155802.13 |
 
-| Layout          | Left hand | Right hand | Left hand continuos | Right hand continuos |
+| Layout          | Left hand | Right hand | Left hand continuous | Right hand continuous |
 | --------------- | --------- | ---------- | ------------------- | -------------------- |
 | Capewell 9.2    | 52.08266  | 47.91734   | 24.04615            | 20.592579            |
 | Norman          | 52.456099 | 47.543901  | 24.800316           | 17.330407            |
@@ -213,8 +213,8 @@ Columns description:
 1. **Same finger** - how often you have to use the same finger.
 1. **Left hand** - how often you have to use fingers on the left hand.
 1. **Right hand** - how often you have to use fingers on the right hand.
-1. **Left hand continuos** - how long you use the left hand without switching to the right.
-1. **Right hand continuos** - how long you use the right hand without switching to the left.
+1. **Left hand continuous** - how long you use the left hand without switching to the right.
+1. **Right hand continuous** - how long you use the right hand without switching to the left.
 1. **Outward rolls** - how often you fingers moves up.
 1. **Inward rolls** - how often you fingers moves a lower row.
 
@@ -225,9 +225,9 @@ Links to all complementary files:
 1. [Configuring Excel file](https://github.com/sgaliamov/ergo-layouts/blob/master/docs/layouts.xlsx) that was used to do evaluations and the design.
 1. [Statistics](https://github.com/sgaliamov/ergo-layouts/blob/master/docs/statistics.md) of sampling texts.
 
-## Own layout
+## Own custom layout
 
-In the process of creating the evaluative method it became clear that none of the existing keyboards would fit it.
+In the process of creating the evaluative method it became clear that none of the existing keyboards would fit it 100%.
 And even the first timid attempt to create a layout gave good results.
 I was inspired and spent a lot of time trying different options, but I could not be satisfied with the results.
 
