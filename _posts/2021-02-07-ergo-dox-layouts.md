@@ -1,5 +1,5 @@
 ---
-title: Evaluation keyboard layouts for ErgoDox EZ
+title: Evaluating keyboard layouts for ErgoDox EZ
 categories: ["ErgoDox", "reviews"]
 created: 2020-08-09
 date: 2021-02-07
@@ -85,9 +85,9 @@ What I find important:
     But from other point of view, the left hand is used more often because we use a mouse with the right hand and place the most of shortcuts on the left side.
     To not over-complicate, I decide stick to balanced option.
 
-1. <ins>Punctuation marks do not have to be in the standard position</ins>
+1. <ins>Punctuation marks do not have to be in the standard positions</ins>
 
-    Since they are completely legitimate elements of a text we can benefit from placing them on better positions.
+    Since they are completely legitimate elements of a text, we can benefit from placing them on a better positions.
     Dot is used more often than a half of letters.
     Why keep it on an awkward button?
 
@@ -101,7 +101,7 @@ What I find important:
     This is really annoying.
     But if you type in one language only this is still relevant to you.
 
-1. <ins>Estimation is based on "effort"</ins> that you have to apply when you press a key and a distance between two presses. This distance factor helps keep most commonly used pairs close to each other.
+1. <ins>Estimation is based on "effort"</ins> that you have to apply when you press a key <ins>and a distance</ins> between two taps. This distance factor helps keep most commonly used pairs close to each other.
 
 Having all this requirements I started [this](https://github.com/sgaliamov/ergo-layouts) project.
 In addition, I planned to try F#, and scope of this challenge was perfect for this.
@@ -208,7 +208,7 @@ Columns description:
 
 1. **Result** - the accumulative score for the layout.
 1. **Hand switch** - how often you have to alternate hands during a typing.
-1. **Efforts** - summary effort of pressing keys.
+1. **Efforts** - summary effort of tapping keys.
 1. **Distance** - summary distance between keys during a typing.
 1. **Same finger** - how often you have to use the same finger.
 1. **Left hand** - how often you have to use fingers on the left hand.
