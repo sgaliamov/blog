@@ -1,8 +1,14 @@
-# edLayouts utility
+---
+title: Evaluating keyboard layouts for ErgoDox EZ
+categories: ["ErgoDox", "reviews"]
+created: 2020-08-09
+date: 2021-02-07
+layout: post
+---
 
 When you buy a keyboard that costs almost 400€, you probably ~~insane~~ want to use it 100%.
 Initially I planned to configure the peripheral buttons only.
-But since with a non-standard keyboard you have to learn how to type, I thought "why not learn a new layout?"
+But since with a non-standard keyboard you have to learn how to type again, I thought "why not learn a new layout?"
 
 The only [Dvorak](https://en.wikipedia.org/wiki/Dvorak_keyboard_layout) came to mind.
 After a short investigation it's turned out that Dvorak is not much better than Qwerty.
@@ -26,12 +32,12 @@ There are many tools and methodologies out there already that evaluate keyboard 
 But they all have the one [fatal flaw](https://www.drdobbs.com/windows/a-brief-history-of-windows-programming-r/225701475): they are based on a standard keyboard.
 
 Most standard keyboards are shifted: upper rows slightly moved left relatively lower rows.
-What is completely reasonable for the right hand.
+What is completely reasonable for the right hand, but not for the left.
 The only explanations, that I can find for why do we have the same shift for the left hand, is reactionism, and is that manufacturers want to save money on production.
 
 ErgoDox keyboard is very different.
 Except for the extra thumb keys, it's slightly bigger than a typical laptop keyboard, and all buttons are placed strictly vertical.
-On a regular keyboard for example, you don't have to tilt your wrist when you press the button N because of the shift.
+On a regular keyboard for example, you don't have to tilt your wrist when you press the button N because of the shifting.
 On the other hand, in the literal and figurative sense, the button B is more reachable now on ErgoDox.
 
 On a regular keyboard it's much easier to use pinky fingers on the top row.
@@ -42,60 +48,60 @@ Maybe this is because of "bad habits" or the adaptation period, but I just don't
 
 What I find important:
 
-1. Support for modern English only.
+1. <ins>Support for modern English only</ins>
 
-    For that purpose I used technical literature of approximately 40MB of pure text in total to do comparisons.
+    For this, I used technical literature containing about 40 MB of pure text to make comparisons.
     [Statistics](https://github.com/sgaliamov/ergo-layouts/blob/master/docs/statistics.md) that I've collected is slightly differs from that you can get using "Alice's Adventures in Wonderland" or "Moby Dick or The Whale".
     This is fine for me, because I deal with technical texts more often.
 
-1. Alternate hands less.
+1. <ins>Alternate hands less</ins>
 
     Colemak is often criticized for the fact that T and H keys are placed on the different sides of a keyboard.
     It breaks the rhythm of the typing.
     This and the fact that the one of the most used vowels, A and O, are intended for pinkies, turned me away from using Colemak.
     For the same reason it's not wise to place all vowels on the same side, like Dvorak does.
 
-1. The keys of the most commonly used [digraphs](https://en.wikipedia.org/wiki/Digraph_(orthography)) should be placed close to each other.
+1. The keys of the <ins>most commonly used [digraphs](https://en.wikipedia.org/wiki/Digraph_(orthography))</ins> should be placed close to each other.
 
     For example, E and R letters create the most used combination in English.
     Even Qw**er**ty has it, but many popular layouts (Workman, Norman, Colemak, etc.) ignore this for a reason that I can not explain.
 
-1. Type continuously with one finger less.
+1. <ins>Type continuously with one finger less</ins>
 
-    Just positioning keys for digraphs close to each other is not enough.
-    It's slower to type, when paired letters are placed vertically, because a finger need to travel some distance to reach a next position.
+    It is not enough to simply place keys for digraphs close to each other.
+    It's slower to type when paired letters are placed vertically, because a finger need to travel some distance to reach a next position.
     Much comfortable and faster to press the next key with another finger.
     For that reason, it's a big loss for Workman and Dvorak to put O and E in the same row next to each other, this combination is used very rarely.
     So, much wiser to have them separately to be able to place consonants in between.
 
-1. Minimize usage of pinkies.
+1. <ins>Minimize usage of pinkies</ins>
 
     The little finger is already overused when pressing `Shift` and `Ctrl` buttons. For the weakest finger it's too big load.
 
-1. The usage of hands should be balanced.
+1. <ins>The usage of hands should be balanced</ins>
 
     It's hard to say which balance is the best.
     It sounds logical that the load on hands should be equal.
     But from other point of view, the left hand is used more often because we use a mouse with the right hand and place the most of shortcuts on the left side.
     To not over-complicate, I decide stick to balanced option.
 
-1. Punctuation marks do not have to be in the standard position.
+1. <ins>Punctuation marks do not have to be in the standard positions</ins>
 
-    Since they are completely legitimate elements of a text we can benefit from placing them on better positions.
+    Since they are completely legitimate elements of a text, we can benefit from placing them on a better positions.
     Dot is used more often than a half of letters.
-    Why have it on an awkward button?
+    Why keep it on an awkward button?
 
-1. Shortcuts are not really important.
+1. <ins>Shortcuts are not really important</ins>
 
-    Since we use ErgoDox keyboard we can configure extra layers and have almost any shortcut anywhere.
+    Since we use ErgoDox we can configure extra layers and have almost any shortcut anywhere.
     The authors of many layouts deliberately left the Z, X, C, V buttons in place to preserve the familiar experience.
-    It makes sense for regular keyboards, and I would care about it if I didn't have ErgoDox.
-    I thought initially.
+    It makes sense for regular keyboards, and I would care about it if I didn't have ErgoDox.\
+    I thought initially.\
     The biggest problem with that is when you have to switch to another language, all shortcuts are moved to the original places and you have to remember two sets of shortcuts.
     This is really annoying.
-    But if you type with one language only, this is still relevant to you.
+    But if you type in one language only this is still relevant to you.
 
-1. Estimation is based on "effort" that you have to apply when you press a key, and distance between two presses. This distance factor helps keep most commonly used pairs close to each other.
+1. <ins>Estimation is based on "effort"</ins> that you have to apply when you press a key <ins>and a distance</ins> between two taps. This distance factor helps keep most commonly used pairs close to each other.
 
 Having all this requirements I started [this](https://github.com/sgaliamov/ergo-layouts) project.
 In addition, I planned to try F#, and scope of this challenge was perfect for this.
@@ -103,7 +109,7 @@ Why do I think that this estimation method is applicable?
 Because the results that it gives correlates with other estimations.
 Qwerty is bad, MTGAP is good as expected.
 
-ErgoDox is such a keyboard for which you first need to learn a functional programming language with [static typing](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system), and then create a utility to find the most optimal configuration for it.
+ErgoDox is such a keyboard for which you first need to learn a functional programming language with [static typing](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system), and then create a utility to find the most optimal configuration for you.
 Joke.
 A functional language with [dynamic typing](https://en.wikipedia.org/wiki/Lisp) is also suitable.
 
@@ -111,7 +117,7 @@ A functional language with [dynamic typing](https://en.wikipedia.org/wiki/Lisp) 
 
 Here is the summary tables:
 
-| Title           | Result      | Hand switch | Efforts     | Distance    |
+| Layout          | Result      | Hand switch | Efforts     | Distance    |
 | --------------- | ----------- | ----------- | ----------- | ----------- |
 | Capewell 9.2    | 45193617.65 | 47.041394   | 98832840.65 | 47665034.04 |
 | Norman          | 45525407.6  | 50.455266   | 99088143.5  | 46649178.52 |
@@ -140,7 +146,7 @@ Here is the summary tables:
 | Dvorak          | 54172386.37 | 65.015753   | 134566516.9 | 45259664.53 |
 | Tnwmlc          | 57007114.11 | 40.363025   | 125989034.5 | 61155802.13 |
 
-| Title           | Left hand | Right hand | Left hand continuos | Right hand continuos |
+| Layout          | Left hand | Right hand | Left hand continuos | Right hand continuos |
 | --------------- | --------- | ---------- | ------------------- | -------------------- |
 | Capewell 9.2    | 52.08266  | 47.91734   | 24.04615            | 20.592579            |
 | Norman          | 52.456099 | 47.543901  | 24.800316           | 17.330407            |
@@ -169,7 +175,7 @@ Here is the summary tables:
 | Dvorak          | 45.45322  | 54.54678   | 8.871743            | 18.2422              |
 | Tnwmlc          | 71.6472   | 28.3528    | 48.633145           | 4.436925             |
 
-| Title           | Same finger | Outward rolls | Inward rolls |
+| Layout          | Same finger | Outward rolls | Inward rolls |
 | --------------- | ----------- | ------------- | ------------ |
 | Capewell 9.2    | 2.00065     | 1.325089      | 1.121522     |
 | Norman          | 4.702983    | 2.673737      | 4.182726     |
@@ -198,11 +204,11 @@ Here is the summary tables:
 | Dvorak          | 2.523221    | 1.234723      | 1.922681     |
 | Tnwmlc          | 15.660386   | 7.58605       | 7.305419     |
 
-Column description:
+Columns description:
 
-1. **Result** - accumulative score for the layout.
+1. **Result** - the accumulative score for the layout.
 1. **Hand switch** - how often you have to alternate hands during a typing.
-1. **Efforts** - summary effort of pressing keys.
+1. **Efforts** - summary effort of tapping keys.
 1. **Distance** - summary distance between keys during a typing.
 1. **Same finger** - how often you have to use the same finger.
 1. **Left hand** - how often you have to use fingers on the left hand.
@@ -221,7 +227,7 @@ Links to all complementary files:
 
 ## Own layout
 
-In the process of creating the evaluative method, it became clear that none of the existing keyboards would fit it.
+In the process of creating the evaluative method it became clear that none of the existing keyboards would fit it.
 And even the first timid attempt to create a layout gave good results.
 I was inspired and spent a lot of time trying different options, but I could not be satisfied with the results.
 
@@ -229,17 +235,18 @@ I realized one important thing: **there is no perfect layout for keyboard**.
 Everything very depends on the estimation method, used keyboard, sampling texts, and personal preferences of an author.
 It will always be a compromise.
 It all depends on what you think is important.
-Almost every attempt based on statistics and common sense will provide better result than Qwerty or Dvorak.
+Almost every attempt based on statistics and common sense will provide better result than Qwerty and Dvorak.
 The time, that you spend on configuring it and learning how to type, most probably will not pay off.
 
-I could not drop this  idea and thus I started another project in which, using a genetic algorithm, I tried to find the optimal layout.
+I could not drop this  idea and thus I started another [project](https://github.com/sgaliamov/ergo-balance) in which, using a genetic algorithm, I tried to find the optimal layout.
 This time I decided to use Rust.
 It was an interesting experience.
 But more on that another time.
 
 ## Summary
 
-So as you can see, that Dvorak which is most popular alternative to Qwerty actually is the worst that you can chose. Tnwmlc is not counted because it was artificially designed to be [bad](http://mkweb.bcgsc.ca/carpalx/?worst_layout).
+So, as you can see, that Dvorak, which is the most popular alternative to Qwerty, is actually the worst you can choose.
+Tnwmlc is not counted because it was artificially designed to be [bad](http://mkweb.bcgsc.ca/carpalx/?worst_layout).
 
 If you need a good layout I recommend to look at:
 
