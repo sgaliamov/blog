@@ -1,6 +1,6 @@
 ---
 title: Evaluating keyboard layouts for ErgoDox EZ
-categories: ["ErgoDox", "reviews"]
+categories: ["ergodox", "reviews"]
 created: 2020-08-09
 date: 2021-02-07
 layout: post
