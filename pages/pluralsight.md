@@ -104,9 +104,8 @@ The list of courses that I took on Pluralsight.
    Many topics have been covered, some of them in detail and with good examples.\
    But some of them were very superficially covered and deserve their own course.
 1. [Implementing Managed Identities for Microsoft Azure Resources](https://app.pluralsight.com/library/courses/microsoft-azure-resources-managed-identities-implementing/table-of-contents).\
-   This is a bit outdated, but might still be useful.
-1. [Implementing Managed Identities for Microsoft Azure Resources](https://app.pluralsight.com/library/courses/microsoft-azure-resources-managed-identities-implementing/table-of-contents)\
-   Good practical introduction to MI, but outdated a bit.
+   This is a bit outdated, but might still be useful.\
+   Somehow I watched it twice :facepalm:
 
 ## ★ I learned nothing new on these courses or really did not like it for some reasons
 
