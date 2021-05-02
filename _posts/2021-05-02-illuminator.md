@@ -1,12 +1,12 @@
 ---
-title: Generating code at runtime with Illuminator
+title: Generating code at runtime with illuminator
 categories: ["library", "msil"]
 created: 2020-01-01
 date: 2021-05-02
 layout: post
 ---
 
-Illuminator is yet another wrapper around [`ILGenerator`](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.ilgenerator), but with some interesting features:
+[Illuminator](https://github.com/sgaliamov/illuminator) is yet another wrapper around [`ILGenerator`](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.ilgenerator), but with some interesting features:
 
 1. [Fluent, convenient API](#fluent-functional-api) with functional programming flavor.
 1. [Extensibility](#custom-extensions).
@@ -268,7 +268,7 @@ No overengineering, no custom names, no complex rules to follow.
 
 Very often different libraries try to hide the underlying technology which they use.
 For example, Entity Framework tries to hide SQL from programmers.
-But it does a disservice eventually, because in order to write efficient code and be able to understand what your code really does, you have to learn EF itself, what SQL it generates, know all caveats, and master SQL anyway.
+But it does a disservice eventually, because in order to write efficient code and be able to understand what your code really does, you have to learn EF itself, know what SQL it generates and all caveats, and master SQL anyway.
 
 Developers who generate code using `MSIL` have to know instructions.
 Doing magical tweaks and hiding `Ldc_I4` for example behind nice `LoadInteger` name does not make things easier.
