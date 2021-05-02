@@ -58,8 +58,7 @@ So much code for such simple function! When you need to write a more complex thi
 There are few problems with this code:
 
 1. It's very verbose, repetitive and hard to read. All this `Emit` and `ObCodes` are just unnecessary noise.
-1. It's very hard to write such code. You need to remember the specification for each instruction and keep in mind the state of the evaluation stack.\
-   You need to know exactly how many parameters each instruction needs.
+1. It's very hard to write such code. You need to remember the specification for each instruction and keep in mind the state of the evaluation stack. You need to know exactly how many parameters each instruction needs.
 1. It's error prone. It's very easy to make a mistake, and exceptions that are thrown at runtime are not very informative.
 
 The simplest thing that we can do to improve the situation is to introduce "fluent" API:
@@ -106,8 +105,8 @@ il.Brfalse_S(Ceq(Ldarg_0(), Ldc_I4_2()), out var label)  // if (value == 2) {
 
 You may think: What?! Wait, try to read it again: it checks (`Brfalse_S`) the result of comparing (`Ceq`) the first argument (`Ldarg_0`) and the constant two (`Ldc_I4_2`); if they are equal, return 1 (`Ret(Ldc_I4_1())`), otherwise return the sum of the argument and three (`Ret(Add(Ldarg_0(), Ldc_I4_3()))`).
 
-The code now is much shorter and close to the target c# version.
-It's nicer to write such code, because all methods have exact amount of parameters that they need, and with output parameters (`out var label`) we don't have to break "fluent flow" to create labels or locals.
+The code now is much shorter and close to the target `C#` version.
+It's nicer to write such code, because all methods have exact amount of parameters that they need, and with output parameters we don't have to break "fluent flow" to create labels or locals (`out var label`).
 
 ## Hot does it work
 
@@ -139,14 +138,14 @@ public static ILEmitter Add(this ILEmitter self, in ILEmitterFunc func1, in ILEm
 }
 ```
 
-`ILEmitterFunc` functions are responsible for preparing values in the stack. And as you may guess, it can be much complex constructions than simple `Ldc_I4`.
+`ILEmitterFunc` functions are responsible for preparing values in the stack. And as you may guess, it can be much complex list of constructions than simple `Ldc_I4`.
 
 As the result we get the fluent, convenient API with functional programming flavor:
 
 1. It uses the original naming of `MSIL` instructions, so you don't need to guess what `Ldc_I4_2` for example does. \
    It does exactly `generator.Emit(OpCodes.Ldc_I4_2);`.
 1. All methods have helpers with exact amount of `ILEmitterFunc` parameters that they need to execute.
-1. We can use output parameters to not break the fluent flow.
+1. We can use output parameters to not break fluent flow.
 1. A flow of instructions can be reused many times as it is a first class function now.
 
 ## Who it is implemented
@@ -227,7 +226,7 @@ using static CustomExtensions.Functions;
 var foo = new DynamicMethod("Foo", typeof(int), new[] { typeof(int) })
     .GetILGenerator()
     .UseIlluminator(
-        enableTraceLogger: true,             // enable tracing
+        enableTraceLogger: true,             // enable tracing (optional)
         Ret(If(Ceq(Ldarg_0(), Ldc_I4_2()),   // condition
                Ldc_I4_1(),                   // then
                Add(Ldarg_0(), Ldc_I4_3())))) // else
@@ -274,8 +273,8 @@ But it does a disservice eventually, because in order to write efficient code, y
 
 Developers who generate code using `MSIL` have to know instructions.
 Doing magical tweaks and hiding `Ldc_I4` for example behind nice `LoadInteger` name does not make things easier.
-A programmer is forced to read the documentation or source code to find out what this method actually does.
+A programmer is forced to read the documentation or source code to find out what such methods actually do.
 
-It does not mean that it's not allowed to create such methods.
+It does not mean that it's not allowed to create your own magical helpers.
 You can and you should to make your own solution more maintainable.
 But this is not the responsibility of the library.
