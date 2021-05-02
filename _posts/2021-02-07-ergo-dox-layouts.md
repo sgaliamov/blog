@@ -1,6 +1,6 @@
 ---
 title: Evaluating keyboard layouts for ErgoDox EZ
-categories: ["ErgoDox", "reviews"]
+categories: ["ergodox", "reviews"]
 created: 2020-08-09
 date: 2021-02-07
 layout: post
@@ -231,14 +231,14 @@ In the process of creating the evaluative method it became clear that none of th
 And even the first timid attempt to create a layout gave good results.
 I was inspired and spent a lot of time trying different options, but I could not be satisfied with the results.
 
-I realized one important thing: **there is no perfect layout for keyboard**.
+I realized the one important thing: **there is no perfect layout for keyboard**.
 Everything very depends on the estimation method, used keyboard, sampling texts, and personal preferences of an author.
 It will always be a compromise.
 It all depends on what you think is important.
 Almost every attempt based on statistics and common sense will provide better result than Qwerty and Dvorak.
 The time, that you spend on configuring it and learning how to type, most probably will not pay off.
 
-I could not drop this  idea and thus I started another [project](https://github.com/sgaliamov/ergo-balance) in which, using a genetic algorithm, I tried to find the optimal layout.
+But I could not drop this  idea and thus I started another [project](https://github.com/sgaliamov/ergo-balance) in which, using a genetic algorithm, I tried to find the optimal layout.
 This time I decided to use Rust.
 It was an interesting experience.
 But more on that another time.
