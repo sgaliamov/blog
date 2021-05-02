@@ -1,5 +1,5 @@
 ---
-title: Generating code in runtime with Illuminator
+title: Generating code at runtime with Illuminator
 categories: ["library", "msil"]
 created: 2020-01-01
 date: 2021-05-02
@@ -8,16 +8,15 @@ layout: post
 
 Illuminator is yet another wrapper around [`ILGenerator`](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.ilgenerator), but with some interesting features:
 
-1. [Fluent, convenient API](#fluent-api) with functional programming flavor.
+1. [Fluent, convenient API](#fluent-functional-api) with functional programming flavor.
 1. [Extensibility](#custom-extensions).
 1. [Tracing generated code](#tracing).
 1. [Transparent abstraction](#final-thoughts).
 1. `.netstandard2.0` support.
 
-This library was emerged from another project, which I implemented with code emission, and was field tested in it.\
-It's a [library](https://github.com/sgaliamov/il-lighten-comparer) which can generate comparers on runtime for any structure or class.
+This library was emerged from another project, which I implemented with code emission, and was field tested in it. That is a [library](https://github.com/sgaliamov/il-lighten-comparer) which can generate comparers on runtime for any structure or class.
 
-## Fluent API
+## Fluent functional API
 
 Let imagine we need to generate the following code:
 
@@ -246,7 +245,7 @@ To do it you can use `enableTraceLogger` parameter, you may notice it in the las
 
 It uses `System.Diagnostics.Trace` and outputs such result:
 
-``` vb
+``` cs
 Int32 Foo(Int32)
           1: .ldarg.0         | 1 # we can see resulting the stack size
           2: .ldc.i4.2        | 2
@@ -269,7 +268,7 @@ No overengineering, no custom names, no complex rules to follow.
 
 Very often different libraries try to hide the underlying technology which they use.
 For example, Entity Framework tries to hide SQL from programmers.
-But it does a disservice eventually, because in order to write efficient code, you have to know EF itself, what SQL it generates, know all caveats, and understand SQL anyway, to be able to understand what your code really does.
+But it does a disservice eventually, because in order to write efficient code and be able to understand what your code really does, you have to learn EF itself, what SQL it generates, know all caveats, and master SQL anyway.
 
 Developers who generate code using `MSIL` have to know instructions.
 Doing magical tweaks and hiding `Ldc_I4` for example behind nice `LoadInteger` name does not make things easier.
