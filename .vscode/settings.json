@@ -11,6 +11,7 @@
     "PLINQ",
     "RAII",
     "Readline",
+    "YAGNI",
     "actix",
     "aspnet",
     "astrodroid",

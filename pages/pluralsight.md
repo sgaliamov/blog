@@ -126,6 +126,8 @@ The list of courses that I took on Pluralsight.
    Just outdated.
 1. [Design Authorization for Microsoft Azure](https://app.pluralsight.com/library/courses/microsoft-azure-authorization-design/table-of-contents).\
    It does not show how to use RBAC properly.
+1. [Building React Apps with TypeScript](https://app.pluralsight.com/library/courses/react-apps-typescript-building).\
+   Tells obvious things.
 
 ## Dropped
 
