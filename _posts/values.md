@@ -15,9 +15,9 @@ Some people may refer to this as "Soft skills".
 But I don't like this name because this things are not "soft" and not quite skills.
 
 I would say that these are a values.
-A misunderstanding of these values will lead to the collapse of any project, even if it follows the most perfect best practices.
+A denial of these values will lead to the collapse of any project, even if it follows the most perfect best practices.
 And the opposite is true as well.
-A deep acceptance of these values can even compensate for a lack of technical skills.
+A deep acceptance of these values can even compensate for the lack of technical skills.
 
 ## Simplicity
 
@@ -38,22 +38,25 @@ But very often developers jump onto new technologies, patterns and methodologies
 As result, we often can see projects in a poor condition where multiple different architectures are applied.
 
 There so much interesting things in software engineering, and it’s hard to blame developers that they want to try everything.
-In addition we all want to be up to date to be competitive on the market.
+In addition we all want to be up to date to stay competitive on the market.
 To be professional and efficient we should always “sharpen the saw”.
 
-The only problem is that, they try on production code and run away when they realize that cannot maintain it anymore.
-I just want developers be careful when they introduce heavy, irrevocable decisions.
+> The only problem is that, they try on production code and run away when they realize that cannot maintain it anymore.
+> I just want developers be careful when they introduce heavy, irrevocable decisions.
 Doing own pet projects is the great way to experiment and to learn without breaking production code and making others live harder.
 
-## Pragmatism
+## Result orientation
 
 No one need coding for sake of coding.
 If you are not scientist or artist of course.
 And we are not. We are engineers.
 We write programs to make others live better and easier.
 
+## Pragmatism
+
 For example, 100% coverage sounds good.
 But think how much other cool thing you could build instead of writing tests?
+Cargo cult is a very common occurrence in software development.
 
 Sometimes I think that whole software exists just because we cut edges all the times.
 
@@ -66,9 +69,11 @@ Good developer - is a lazy developer.
  This is why we should think more about the value we create than about our ego.
  We should think more how to help our teammates than about current needs or interests.
 
-## Passion and patience
+## Passion & patience
 
 People who care about their work tend to provide better results.
+Passion is a driver which push you beyond the boundaries.
+
 But passion has a dark side.
 Sometimes people go too far and can’t handle emotions.
 People often talk about the giving feedback skill, but for some reason, they ignore the receiving feedback skill.
@@ -84,9 +89,9 @@ Don’t worry. Let people make their own mistakes.
 At least they will learn something. If you were right, they will listen eventually.
 Be passionate and patient.
 
-## Ownership and responsibility
+## Ownership & responsibility
 
-
+We all know that code ownership is a bad practice.
 
 ## Professionalism
 
