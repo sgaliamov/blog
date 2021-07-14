@@ -33,24 +33,34 @@ Designing a simple, easy-to-maintain solution that even a junior can support is 
 Principles like SOLID, “Composition over Inheritance”, KISS, YAGNI help us to fight with complexity and entropy,
 but they won't work if a developer thinks that creating a big multilevel class hierarchy is what programming about.
 
-> Another thing that kills simplicity is an attempt to create universal framework or approach that solves all problems.
-> You can heard - "there is no sliver bullet".
+One of the things that kills simplicity is attempts to create universal framework or approach that solves all problems.
+You may heard - "there is no sliver bullet".
+So any "universal framework" will hit some limitations and will become the reason why developers will want to "rewrite everything".
 
-## Moderation & Maturity
+Very often straightforward solution is the most effective and fastest to implement.
+One great advantage of this solution is that it's easy to change.
+We know that **changes are inevitable**.
+This truth everyone should understand and be prepared for this.
+
+Please, note.
+I'm not engaging to access database directly from view models.
+I'm telling that
+
+## Temperance & Maturity
 
 Simplicity is the result of maturity and experience.
 Following best practices is a good thing.
 But very often developers jump onto new technologies, patterns and methodologies just for the sake of their use and not for the solving problems.
 As result, we often can see projects in a poor condition where multiple different architectures are applied,
-and non of them is brought to a logical result.
+and none of them is brought to a logical result.
 
 There so much interesting things in software engineering, and it’s hard to blame developers that they want to try everything.
-In addition we all want to be up to date to stay competitive on the market.
+In addition, we all want to be up to date to stay competitive on the market.
 To be professional and efficient we should always “sharpen the saw”.
 
 The only problem is that developers are too often carelessly experimenting in production code with things they don't fully understand.
-Others have to pay for this unsuccessful experiments with the employer's money or the time of other developers.
-We live in a very unfair world where maintenance of solutions are less respected and less paid than building new green field projects,
+Others have to pay for these unsuccessful experiments with the employer's money or the time of other developers.
+We live in a very unfair world where maintenance of solutions is less respected and less paid than building new green field projects,
 even if that maintenance actually makes a profit for the companies.
 
 Doing own pet projects is the great way to experiment and to learn without breaking production code and making others live harder.
@@ -69,13 +79,13 @@ We write programs to make others live better and easier.
 
 If we don't offer the real solution to the real problem, we play toys.
 And it's probably great, especially if you paid for it.
-But at some point the games end.
-If you are not ready for this, you loose.
+But at some point, the games end.
+If you are not ready for this, you lose.
 
 For example, "100% code coverage" sounds good.
 Nobody argues with this.
 Even saying something against it is dangerous.
-Like many “best practices,” this has an almost religious status.
+Like many "best practices", this has an almost religious status.
 This is sad that cargo cult is a very common occurrence in software development.
 Just think, how much other cool thing you could build instead of writing tests?
 
@@ -83,12 +93,14 @@ I'm not saying that we should not write tests at all.
 What I am saying is that we have to do just enough to be confident when deploying to a production environment.
 A good programmer is a lazy programmer.
 
-Perfectionism is a great quality of a developer, I believe.
-But but everything has limits and any investment should pay off over time.
-If you can't apply the skills you've acquired through endless refactorings and tunings, you've wasted your time.
-And live as a result.
+Perfectionism is a great quality of a developer.
+But everything has limits and any investment should pay off over time.
+If you can't apply the skills you've acquired through endless refactoring and tunings, you've wasted your time.
+And live as the result.
 Nobody cares about this.
 "Quality in a service or product is not what you put into it. It is what the client or customer gets out of it." - Peter Drucker.
+Therefore, if we direct perfectionism to the right direction, everyone wins.
+It is very pragmatic to be a perfectionist in terms of service quality.
 
 ## Passion & Patience
 
