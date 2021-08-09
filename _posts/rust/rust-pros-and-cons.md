@@ -73,9 +73,8 @@ Here is my list. Of course, I may miss some important consents and be very subje
 1. No reflection. Things like de-serialization and IoC containers are not easy to implement, but possible. Adopting the `Poor Man's DI` approach can solve this problem.
 1. No ternary operator. Very minor minus. But why not have it?
 1. It's a very new language still. Some documentation is missing.
-1. Snake case.
 1. When deal with generics (collect) have to declare type and temp variable. Hard to chain in the same way how we chain generic methods in C#.
-1. Memory fragmentation is possible. But it's not really important.
+1. Memory fragmentation is possible. But it doesn't really matter.
 1. Rust doesn’t allow you to create your own operators or overload arbitrary operators.
 1. Still can implement template method:
 
@@ -96,11 +95,17 @@ Here is my list. Of course, I may miss some important consents and be very subje
 
 1. It's not clear when object is moved or copied. `let actual = foo(s);` it depends on whether `s` has `Copy` trait.
 1. To get the most interesting things, like async closures, you have to use a nightly build. What is not safe in perspective.
-1. Strange constructs like `PhantomData`.
+1. Strange constructs like 
+   1. `PhantomData`.
+   1. <https://doc.rust-lang.org/std/keyword.ref.html>
 1. Hard to do refactoring.\
    Basically you will have to rewrite your code.
 1. Harder to use traits in methods.\
    Have to use `dyn` or define life scope explicitly.
+
+## Mixed
+
+1. Snake case. After some period of practice, you start get used to it. This gives to the language own handwriting.
 
 ## Summary
 
